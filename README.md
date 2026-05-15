@@ -82,7 +82,7 @@ Les AOB patterns sont définis dans :
 - `game.cpp` — patterns pour `AddItem` et `InventoryAccessor`
 - `flag.cpp` — pattern pour `EventFlagFunc`
 
-Si tu es sur une version différente d'Elden Ring, ces patterns ne matcheront probablement pas. Tu devras trouver les nouveaux AOB avec un outil comme Cheat Engine (ou t'inspirer des CT de HeXinton).
+Si tu es sur une version différente d'Elden Ring, ces patterns ne matcheront probablement pas. Tu devras trouver les nouveaux AOB avec un outil comme Cheat Engine (ou t'inspirer des CT de HeXinton ou autre cheat table).
 
 ---
 
