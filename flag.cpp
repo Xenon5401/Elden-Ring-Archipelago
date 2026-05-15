@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <cstring>
 
-// --- AOB patterns (Elden Ring v1.10.0, du CT HeXinton) ---
+// --- AOB patterns (Elden Ring v1.12, du CT HeXinton) ---
 
 static const char* EVENTFLAG_FUNC_PATTERN =
     "48 89 5C 24 08 48 89 74 24 18 57 48 83 EC 30 "

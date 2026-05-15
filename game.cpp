@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <cstdarg>
 
-// --- AOB patterns (Elden Ring v1.10.0) ---
+// --- AOB patterns (Elden Ring v1.12) ---
 static const char* ADDITEM_PATTERN =
     "40 55 56 57 41 54 41 55 41 56 41 57 "
     "48 8D AC 24 70 FF FF FF "
