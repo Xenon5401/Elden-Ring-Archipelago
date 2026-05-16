@@ -18,10 +18,15 @@ async def main():
     print(f"[archipelago] {len(ids)} locations loaded")
 
     async with connect("ws://127.0.0.1:12999/ws") as ws:
-        msg = '{"set_flag_whitelist":[' + ",".join(str(i) for i in ids) + "]}"
-        await ws.send(msg)
-        resp = await asyncio.wait_for(ws.recv(), timeout=5)
-        print(f"[archipelago] {resp}")
+        msg1 = '{"set_flag_loot":[' + ",".join(str(i) for i in ids) + "]}"
+        await ws.send(msg1)
+        resp1 = await asyncio.wait_for(ws.recv(), timeout=5)
+        print(f"[archipelago] {resp1}")
+
+        msg2 = '{"set_watched_flag":[' + ",".join(str(i) for i in ids) + "]}"
+        await ws.send(msg2)
+        resp2 = await asyncio.wait_for(ws.recv(), timeout=5)
+        print(f"[archipelago] {resp2}")
 
         fd = sys.stdin.fileno()
         old = termios.tcgetattr(fd)

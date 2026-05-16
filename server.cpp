@@ -81,14 +81,25 @@ static void handle_give(const httplib::Request& req, httplib::Response& res) {
 }
 
 static void ws_handle(httplib::ws::WebSocket& w, const std::string& msg) {
-    if (msg.find("set_flag_whitelist") != std::string::npos) {
-        extract_int_array(msg, g_flagWhitelist);
+    if (msg.find("set_flag_loot") != std::string::npos) {
+        extract_int_array(msg, g_FlagLoot);
         if (ensure_patterns()) {
             install_hook();
             install_flag_hook();
         }
-        dbg("[ws] flag whitelist updated (%zu items)\n", g_flagWhitelist.size());
-        w.send("{\"status\":\"flag_whitelist_updated\"}");
+        dbg("[ws] flag loot updated (%zu items)\n", g_FlagLoot.size());
+        w.send("{\"status\":\"flag_loot_updated\"}");
+        return;
+    }
+
+    if (msg.find("set_watched_flag") != std::string::npos) {
+        extract_int_array(msg, g_WatchedFlag);
+        if (ensure_patterns()) {
+            install_hook();
+            install_flag_hook();
+        }
+        dbg("[ws] watched flag updated (%zu items)\n", g_WatchedFlag.size());
+        w.send("{\"status\":\"watched_flag_updated\"}");
         return;
     }
 

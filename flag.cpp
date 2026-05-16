@@ -14,7 +14,8 @@ static const char* EVENTFLAG_FUNC_PATTERN =
 
 FlagEventQueue               g_flagQueue;
 uintptr_t                    g_eventFlagFunc = 0;
-std::unordered_set<uint32_t> g_flagWhitelist;
+std::unordered_set<uint32_t> g_FlagLoot;
+std::unordered_set<uint32_t> g_WatchedFlag;
 
 bool           g_flag_hook_installed = false;
 static uint8_t g_original_flag_bytes[15];
@@ -35,7 +36,7 @@ bool ensure_flag_patterns() {
     return true;
 }
 
-static void call_original_event_flag(void* mgr, uint32_t* flagId, uint8_t value) {
+static void call_original_event_flag(void* mgr, uint32_t* flagId, uint8_t value) { // Call the original function by restoring bytes
     DWORD old;
     VirtualProtect((void*)g_eventFlagFunc, 15, PAGE_EXECUTE_READWRITE, &old);
     memcpy((void*)g_eventFlagFunc, g_original_flag_bytes, 15);
@@ -57,15 +58,16 @@ static void call_original_event_flag(void* mgr, uint32_t* flagId, uint8_t value)
 
 static void __attribute__((noinline)) eventFlagHook(void* mgr, uint32_t* flagId, uint8_t value) {
     uint32_t id = *flagId;
-    bool watched = g_flagWhitelist.empty() || g_flagWhitelist.count(id);
+    bool loot  = g_FlagLoot.empty() || g_FlagLoot.count(id);
+    bool watch = g_WatchedFlag.empty() || g_WatchedFlag.count(id);
 
-    if (watched) {
-        FlagEvent ev{id, value};
-        g_flagQueue.push(ev);
-        if (value && GetTickCount64() >= g_itemBlockUntil.load()) {
-            g_itemBlockUntil.store(GetTickCount64() + 40);
-            dbg("[flag] watched flag %u set, blocking items for 80ms\n", id);
-        }
+    if (loot || watch) {
+        g_flagQueue.push({id, value});
+    }
+
+    if (loot && value && GetTickCount64() >= g_itemBlockUntil.load()) {
+        g_itemBlockUntil.store(GetTickCount64() + 40);
+        dbg("[flag] loot flag %u set, blocking items\n", id);
     }
 
     call_original_event_flag(mgr, flagId, value);

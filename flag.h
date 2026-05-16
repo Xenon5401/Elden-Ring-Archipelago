@@ -44,7 +44,8 @@ public:
 extern FlagEventQueue           g_flagQueue;
 extern uintptr_t                g_eventFlagFunc;
 extern bool                     g_flag_hook_installed;
-extern std::unordered_set<uint32_t> g_flagWhitelist;
+extern std::unordered_set<uint32_t> g_FlagLoot;
+extern std::unordered_set<uint32_t> g_WatchedFlag;
 
 bool ensure_flag_patterns();
 void install_flag_hook();
