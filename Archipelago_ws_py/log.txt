@@ -1,0 +1,37 @@
+(venv) [xenon@xenonarch Archipelago_ws_py]$ python ap_client.py 
+[DLL] Connecté
+[DLL] Envoi de 4252 flags à surveiller
+Received RoomInfo: [{"cmd":"RoomInfo","password":false,"games":["Archipelago","ChecksFinder","EldenRing"],"tags":["AP"],"version":{"major":0,"minor":6,"build":7,"class":"Version"},"generator_version":{"major":0,"minor":6,"build":7,"class":"Version"},"permissions":{"release":6,"remaining":2,"collect":6},"hint_cost":10,"location_check_points":1,"datapackage_checksums":{"Archipelago":"ac9141e9ad0318df2fa27da5f20c50a842afeecb","ChecksFinder":"fa1495135d77947e94aeec67ace94286ba5892b2","EldenRing":"106fbf0aa358d5cabd74346140842bea1b66a2d9"},"seed_name":"93536712667786635593","time":1779037918.0340178}]
+Connected! Team=0 Slot=2
+Missing locations: 3740 | first: [7000000, 7000001, 7000002] ... last: [7004462, 7004463, 7004464]
+Checked locations: 0
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': 'Xenon (Team #1) playing EldenRing has joined. Client(0.6.7), [].'}], 'type': 'Join', 'team': 0, 'slot': 2, 'tags': []}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': 'Now that you are connected, you can use !help to list commands to run via the server. If your client supports it, you may have additional local commands you can list with /help.'}], 'type': 'Tutorial'}]
+[DLL] Réponse set_flag_loot: {"status":"flag_loot_updated"}
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042377070, 'value': 1}
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042377060, 'value': 1}
+[DLL] Event: {'type': 'flag_set', 'flag_id': 60100, 'value': 1}
+[DLL] Event: {'type': 'flag_set', 'flag_id': 62010, 'value': 1}
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000245]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70652', 'player': 2, 'flags': 1, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000245', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70652, 'location': 7000245, 'player': 2, 'flags': 1, 'class': 'NetworkItem'}}]
+[Server] Event AP: [{'cmd': 'ReceivedItems', 'index': 0, 'items': [{'item': 70652, 'location': 7000245, 'player': 2, 'flags': 1, 'class': 'NetworkItem'}]}]
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 1, 'checked_locations': [7000245]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042387140, 'value': 1}
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1041387100, 'value': 1}
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000832]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70627', 'player': 2, 'flags': 1, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000832', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70627, 'location': 7000832, 'player': 2, 'flags': 1, 'class': 'NetworkItem'}}]
+[Server] Event AP: [{'cmd': 'ReceivedItems', 'index': 1, 'items': [{'item': 70627, 'location': 7000832, 'player': 2, 'flags': 1, 'class': 'NetworkItem'}]}]
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 2, 'checked_locations': [7000832]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1041387040, 'value': 1}
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000964]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70283', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000964', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70283, 'location': 7000964, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] Event AP: [{'cmd': 'ReceivedItems', 'index': 2, 'items': [{'item': 70283, 'location': 7000964, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}]}]
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 3, 'checked_locations': [7000964]}]
+[DLL_serveur] Error: no close frame received or sent. Retrying in 5 seconds...
+[DLL_serveur] Error: [Errno 111] Connect call failed ('127.0.0.1', 12999). Retrying in 5 seconds...
+[DLL_serveur] Error: [Errno 111] Connect call failed ('127.0.0.1', 12999). Retrying in 5 seconds...
+
+

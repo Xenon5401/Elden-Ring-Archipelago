@@ -58,8 +58,8 @@ static void call_original_event_flag(void* mgr, uint32_t* flagId, uint8_t value)
 
 static void __attribute__((noinline)) eventFlagHook(void* mgr, uint32_t* flagId, uint8_t value) {
     uint32_t id = *flagId;
-    bool loot  = g_FlagLoot.empty() || g_FlagLoot.count(id);
-    bool watch = g_WatchedFlag.empty() || g_WatchedFlag.count(id);
+    bool loot  = g_FlagLoot.count(id);
+    bool watch = g_WatchedFlag.count(id);
 
     if (loot || watch) {
         g_flagQueue.push({id, value});

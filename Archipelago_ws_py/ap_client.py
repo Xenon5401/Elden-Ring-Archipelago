@@ -1,7 +1,9 @@
-import websockets
+import websockets  # type: ignore
 import asyncio
 import json
 import yaml
+import re
+import unicodedata
 
 with open('elden_ring.yaml', 'r') as f:
     config = yaml.safe_load(f)
@@ -10,10 +12,41 @@ server = config['server']
 if not server.startswith(('ws://', 'wss://')):
     server = f'ws://{server}'
 
-DataPackage = {}
+try:
+    with open('datapackage_eldenring.json', 'r', encoding='utf-8') as f:
+        DataPackage = json.load(f)
+except FileNotFoundError:
+    DataPackage = {}
+
+# Flag → AP locations mapping
+try:
+    with open('flag_to_locations.json', 'r', encoding='utf-8') as f:
+        FLAG_TO_LOCS = json.load(f)
+except FileNotFoundError:
+    FLAG_TO_LOCS = {}
+
+# All flag IDs → will be sent as loot flags to DLL (empty location array = watched but no AP action)
+LOOT_FLAG_IDS = [int(fid) for fid in FLAG_TO_LOCS]
+
+def clean_name(name: str) -> str:
+    name = re.sub(r'^\[.*?\]\s*', '', name)
+    name = unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode('ascii')
+    name = name.strip()
+    if name == 'Terra Magicus':
+        return 'Terra Magica'
+    return name
+
+
+
 secret = {"uuid": "afc006ee-e0f7-47b0-838b-7d2c37ed417b"}
 
-async def connect():
+# Queue partagée entre les deux clients
+queue_serv_to_dll = asyncio.Queue()
+queue_dll_to_serv = asyncio.Queue()
+
+# Client Archipelago (communication avec le serveur Archipelago)
+
+async def server_archi():
     global DataPackage
     while True:
         try:
@@ -25,16 +58,17 @@ async def connect():
                 server_version = room_info.get("version")
 
                 # 2. GetDataPackage
-                await websocket.send(json.dumps([{"cmd": "GetDataPackage", "games": ["EldenRing"]}]))
+                if DataPackage == {}:
+                    await websocket.send(json.dumps([{"cmd": "GetDataPackage", "games": ["EldenRing"]}]))
 
-                # 3. DataPackage
-                raw = await websocket.recv()
-                print(f"Received DataPackage: {raw[:200]}...")
-                DataPackage = json.loads(raw)[0]
+                    # 3. DataPackage
+                    raw = await websocket.recv()
+                    print(f"Received DataPackage: {raw[:200]}...")
+                    DataPackage = json.loads(raw)[0]
 
-                with open('datapackage_eldenring.json', 'w', encoding='utf-8') as f:
-                    json.dump(DataPackage, f, indent=4, ensure_ascii=False)
-                print("DataPackage saved to datapackage_eldenring.json")
+                    with open('datapackage_eldenring.json', 'w', encoding='utf-8') as f:
+                        json.dump(DataPackage, f, indent=4, ensure_ascii=False)
+                    print("DataPackage saved to datapackage_eldenring.json")
 
                 # 4. Connect
                 await websocket.send(json.dumps([{
@@ -64,13 +98,82 @@ async def connect():
                 print(f"Missing locations: {len(missing)} | first: {missing[:3]} ... last: {missing[-3:]}")
                 print(f"Checked locations: {len(checked)}")
 
-                # 6. Boucle d'écoute
-                async for message in websocket:
-                    parsed = json.loads(message)
-                    print(f"Event: {parsed}")
+               # Tâche séparée pour envoyer les messages de la DLL vers AP
+                async def send_loop():
+                    while True:
+                        msg = await queue_dll_to_serv.get()
+                        print(f"[Server] Envoi vers AP: {msg}")
+                        await websocket.send(json.dumps(msg))
+
+                # Tâche séparée pour recevoir les messages AP (pas forwardé à DLL)
+                async def recv_loop():
+                    async for message in websocket:
+                        parsed = json.loads(message)
+                        print(f"[Server] Event AP: {parsed}")
+
+                await asyncio.gather(send_loop(), recv_loop())
+
 
         except Exception as e:
             print(f"Connection error: {e}. Retrying in 5 seconds...")
             await asyncio.sleep(5)
 
-asyncio.run(connect())
+# Client DLL 
+
+async def dll():
+    while True:
+        try:
+            async with websockets.connect("ws://127.0.0.1:12999/ws") as websocket:
+                print("[DLL] Connecté")
+
+                # Envoyer la liste des flags à surveiller
+                if LOOT_FLAG_IDS:
+                    loot_msg = {"set_flag_loot": LOOT_FLAG_IDS}
+                    print(f"[DLL] Envoi de {len(LOOT_FLAG_IDS)} flags à surveiller")
+                    await websocket.send(json.dumps(loot_msg))
+                    resp = await websocket.recv()
+                    print(f"[DLL] Réponse set_flag_loot: {resp}")
+
+                async def recv_loop():
+                    pending_locs = set()
+
+                    async def flush():
+                        if pending_locs:
+                            locs = list(pending_locs)
+                            pending_locs.clear()
+                            check_msg = [{"cmd": "LocationChecks", "locations": locs}]
+                            print(f"[DLL] → LocationChecks batch: {len(locs)} locs")
+                            await queue_dll_to_serv.put(check_msg)
+
+                    async def reader():
+                        async for message in websocket:
+                            parsed = json.loads(message)
+                            print(f"[DLL] Event: {parsed}")
+
+                            if isinstance(parsed, dict) and parsed.get("type") == "flag_set":
+                                if parsed.get("value") == 1:
+                                    fid = str(parsed["flag_id"])
+                                    locs = FLAG_TO_LOCS.get(fid, [])
+                                    if locs:
+                                        pending_locs.update(locs)
+
+                    async def flusher():
+                        while True:
+                            await asyncio.sleep(0.2)
+                            await flush()
+
+                    await asyncio.gather(reader(), flusher())
+
+                await recv_loop()
+
+        except Exception as e:
+            print(f"[DLL_serveur] Error: {e}. Retrying in 5 seconds...")
+            await asyncio.sleep(5)
+
+async def main():
+    await asyncio.gather(
+        server_archi(),
+        dll()
+    )
+
+asyncio.run(main())
