@@ -1,0 +1,12 @@
+name: Xenon
+game: EldenRing
+description: Elden Ring Archipelago client
+
+server: localhost:38281
+password: ''
+
+flag_file: map_items.json
+
+progression_balancing: 50
+accessibility: items
+items_handling: 7
