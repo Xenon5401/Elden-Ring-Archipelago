@@ -18,15 +18,6 @@ try:
 except FileNotFoundError:
     DataPackage = {}
 
-# Flag → AP locations mapping
-try:
-    with open('flag_to_locations.json', 'r', encoding='utf-8') as f:
-        FLAG_TO_LOCS = json.load(f)
-except FileNotFoundError:
-    FLAG_TO_LOCS = {}
-
-# All flag IDs → will be sent as loot flags to DLL (empty location array = watched but no AP action)
-LOOT_FLAG_IDS = [int(fid) for fid in FLAG_TO_LOCS]
 
 def clean_name(name: str) -> str:
     name = re.sub(r'^\[.*?\]\s*', '', name)
@@ -36,6 +27,17 @@ def clean_name(name: str) -> str:
         return 'Terra Magica'
     return name
 
+
+def build_flag_maps(dp: dict):
+    location_to_flag = dp.get("data", {}).get("games", {}).get("EldenRing", {}).get("location_to_flag", {})
+    FLAG_TO_LOC_IDS = {}
+    for loc_id_str, flag in location_to_flag.items():
+        FLAG_TO_LOC_IDS.setdefault(str(flag), []).append(int(loc_id_str))
+    LOOT_FLAG_IDS = list(FLAG_TO_LOC_IDS.keys())
+    return FLAG_TO_LOC_IDS, LOOT_FLAG_IDS
+
+
+FLAG_TO_LOC_IDS, LOOT_FLAG_IDS = build_flag_maps(DataPackage) if DataPackage else ({}, [])
 
 
 secret = {"uuid": "afc006ee-e0f7-47b0-838b-7d2c37ed417b"}
@@ -47,7 +49,7 @@ queue_dll_to_serv = asyncio.Queue()
 # Client Archipelago (communication avec le serveur Archipelago)
 
 async def server_archi():
-    global DataPackage
+    global DataPackage, FLAG_TO_LOC_IDS, LOOT_FLAG_IDS
     while True:
         try:
             async with websockets.connect(server) as websocket:
@@ -65,10 +67,13 @@ async def server_archi():
                     raw = await websocket.recv()
                     print(f"Received DataPackage: {raw[:200]}...")
                     DataPackage = json.loads(raw)[0]
+                    print(DataPackage["data"]["games"]["EldenRing"].keys())
 
                     with open('datapackage_eldenring.json', 'w', encoding='utf-8') as f:
                         json.dump(DataPackage, f, indent=4, ensure_ascii=False)
                     print("DataPackage saved to datapackage_eldenring.json")
+
+                    FLAG_TO_LOC_IDS, LOOT_FLAG_IDS = build_flag_maps(DataPackage)
 
                 # 4. Connect
                 await websocket.send(json.dumps([{
@@ -121,8 +126,13 @@ async def server_archi():
 # Client DLL 
 
 async def dll():
+    global LOOT_FLAG_IDS
     while True:
         try:
+            # Attendre que le DataPackage soit chargé si nécessaire
+            while not LOOT_FLAG_IDS and DataPackage == {}:
+                await asyncio.sleep(0.5)
+
             async with websockets.connect("ws://127.0.0.1:12999/ws") as websocket:
                 print("[DLL] Connecté")
 
@@ -153,9 +163,9 @@ async def dll():
                             if isinstance(parsed, dict) and parsed.get("type") == "flag_set":
                                 if parsed.get("value") == 1:
                                     fid = str(parsed["flag_id"])
-                                    locs = FLAG_TO_LOCS.get(fid, [])
-                                    if locs:
-                                        pending_locs.update(locs)
+                                    loc_ids = FLAG_TO_LOC_IDS.get(fid, [])
+                                    if loc_ids:
+                                        pending_locs.update(loc_ids)
 
                     async def flusher():
                         while True:
