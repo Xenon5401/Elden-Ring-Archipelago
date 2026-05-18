@@ -31,8 +31,17 @@ def clean_name(name: str) -> str:
 def build_flag_maps(dp: dict):
     location_to_flag = dp.get("data", {}).get("games", {}).get("EldenRing", {}).get("location_to_flag", {})
     FLAG_TO_LOC_IDS = {}
-    for loc_id_str, flag in location_to_flag.items():
-        FLAG_TO_LOC_IDS.setdefault(str(flag), []).append(int(loc_id_str))
+    
+    for key, value in location_to_flag.items():
+        try:
+            # Try to convert key to int (should be location ID)
+            loc_id = int(key)
+            flag = str(value)
+            FLAG_TO_LOC_IDS.setdefault(flag, []).append(loc_id)
+        except (ValueError, TypeError) as e:
+            print(f"Warning: Skipping invalid entry in location_to_flag - key: {key}, value: {value}, error: {e}")
+            continue
+    
     LOOT_FLAG_IDS = list(FLAG_TO_LOC_IDS.keys())
     return FLAG_TO_LOC_IDS, LOOT_FLAG_IDS
 
@@ -129,20 +138,26 @@ async def dll():
     global LOOT_FLAG_IDS
     while True:
         try:
-            # Attendre que le DataPackage soit chargé si nécessaire
-            while not LOOT_FLAG_IDS and DataPackage == {}:
-                await asyncio.sleep(0.5)
 
-            async with websockets.connect("ws://127.0.0.1:12999/ws") as websocket:
+
+            async with websockets.connect("ws://127.0.0.1:12999/ws", ping_interval=20, ping_timeout=10) as websocket:
                 print("[DLL] Connecté")
 
                 # Envoyer la liste des flags à surveiller
                 if LOOT_FLAG_IDS:
-                    loot_msg = {"set_flag_loot": LOOT_FLAG_IDS}
-                    print(f"[DLL] Envoi de {len(LOOT_FLAG_IDS)} flags à surveiller")
+                    # Convertir les strings en entiers
+                    loot_flags_int = [int(flag) for flag in LOOT_FLAG_IDS]
+                    loot_msg = {"set_flag_loot": loot_flags_int}
+                    print(f"[DLL] Envoi de {len(loot_flags_int)} flags à surveiller")
+                    print(f"[DLL] Flags envoyés: {loot_flags_int[:10]}{'...' if len(loot_flags_int) > 10 else ''}")
+                    print(f"[DLL] Message complet: {json.dumps(loot_msg)[:500]}...")
                     await websocket.send(json.dumps(loot_msg))
-                    resp = await websocket.recv()
-                    print(f"[DLL] Réponse set_flag_loot: {resp}")
+                    try:
+                        resp = await asyncio.wait_for(websocket.recv(), timeout=5.0)
+                        print(f"[DLL] Réponse set_flag_loot: {resp}")
+                    except asyncio.TimeoutError:
+                        print("[DLL] Timeout en attente de réponse set_flag_loot (continuant...)")
+                        # Continue anyway - the server might not send an ack
 
                 async def recv_loop():
                     pending_locs = set()
@@ -164,6 +179,7 @@ async def dll():
                                 if parsed.get("value") == 1:
                                     fid = str(parsed["flag_id"])
                                     loc_ids = FLAG_TO_LOC_IDS.get(fid, [])
+                                    print(f"[DLL] Flag {fid} set -> locations: {loc_ids}")
                                     if loc_ids:
                                         pending_locs.update(loc_ids)
 
