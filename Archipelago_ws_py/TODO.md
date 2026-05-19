@@ -4,7 +4,14 @@
 
 - [ ] **Sync / Désync** : Gérer les index mismatch avec `ReceivedItems` → envoyer `Sync` + `LocationChecks`
 - [x] **Connexion AP complète** : Handshake complet (RoomInfo → Connect → Connected)
-- [ ] **Forward items** : Traduire `ReceivedItems` du serveur AP en `/give` vers la DLL
+- [x] **Forward items** : Traduire `ReceivedItems` du serveur AP en `/give` vers la DLL
+
+## Items manquants dans item_id_to_game_data.json
+
+- [x] **Poisoned Stone Clump** (id=1841, type=4)
+- [x] **Altus Bloom** (id=20681, type=4)
+- [x] **Spellproof Pickled Liver** (id=2001120, type=4)
+- [x] **Golden Vow (Consumable)** (id=2003170, type=4 — alias de Golden Vow)
 
 ## Priorité Moyenne
 

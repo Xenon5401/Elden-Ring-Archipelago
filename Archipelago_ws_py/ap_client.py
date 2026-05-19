@@ -1,9 +1,10 @@
-import websockets  # type: ignore
+import websockets
 import asyncio
 import json
 import yaml
 import re
 import unicodedata
+import urllib.request
 
 with open('elden_ring.yaml', 'r') as f:
     config = yaml.safe_load(f)
@@ -11,12 +12,6 @@ with open('elden_ring.yaml', 'r') as f:
 server = config['server']
 if not server.startswith(('ws://', 'wss://')):
     server = f'ws://{server}'
-
-try:
-    with open('datapackage_eldenring.json', 'r', encoding='utf-8') as f:
-        DataPackage = json.load(f)
-except FileNotFoundError:
-    DataPackage = {}
 
 
 def clean_name(name: str) -> str:
@@ -28,63 +23,103 @@ def clean_name(name: str) -> str:
     return name
 
 
-def build_flag_maps(dp: dict):
-    location_to_flag = dp.get("data", {}).get("games", {}).get("EldenRing", {}).get("location_to_flag", {})
-    FLAG_TO_LOC_IDS = {}
-    
-    for key, value in location_to_flag.items():
+class GameData:
+    CACHE_FILE = 'datapackage_eldenring.json'
+
+    def __init__(self):
+        self._raw: dict = self._load_cache()
+        self._flag_to_locs: dict[str, list[int]] | None = None  # cache interne
+
+    def _load_cache(self) -> dict:
         try:
-            # Try to convert key to int (should be location ID)
-            loc_id = int(key)
-            flag = str(value)
-            FLAG_TO_LOC_IDS.setdefault(flag, []).append(loc_id)
-        except (ValueError, TypeError) as e:
-            print(f"Warning: Skipping invalid entry in location_to_flag - key: {key}, value: {value}, error: {e}")
-            continue
-    
-    LOOT_FLAG_IDS = list(FLAG_TO_LOC_IDS.keys())
-    return FLAG_TO_LOC_IDS, LOOT_FLAG_IDS
+            with open(self.CACHE_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except FileNotFoundError:
+            return {}
+
+    def update(self, raw: dict):
+        self._raw = raw
+        self._flag_to_locs = None  # invalide le cache
+        with open(self.CACHE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(raw, f, indent=4, ensure_ascii=False)
+        print(f"DataPackage sauvegardé dans {self.CACHE_FILE}")
+
+    @property
+    def is_empty(self) -> bool:
+        return not self._raw
+
+    @property
+    def _location_to_flag(self) -> dict:
+        return (
+            self._raw
+            .get("data", {})
+            .get("games", {})
+            .get("EldenRing", {})
+            .get("location_to_flag", {})
+        )
+
+    @property
+    def flag_to_locs(self) -> dict[str, list[int]]:
+        if self._flag_to_locs is None:
+            result: dict[str, list[int]] = {}
+            for loc_id, flag in self._location_to_flag.items():
+                try:
+                    result.setdefault(str(flag), []).append(int(loc_id))
+                except (ValueError, TypeError) as e:
+                    print(f"Warning: entrée invalide loc_id={loc_id} flag={flag}: {e}")
+            self._flag_to_locs = result
+        return self._flag_to_locs
+
+    def watch_flags(self) -> list[int]:
+        return [int(f) for f in self.flag_to_locs]
+
+    def locs_for_flag(self, flag_id: int | str) -> list[int]:
+        return self.flag_to_locs.get(str(flag_id), [])
+
+    @property
+    def item_name_to_id(self) -> dict[str, int]:
+        return (
+            self._raw
+            .get("data", {})
+            .get("games", {})
+            .get("EldenRing", {})
+            .get("item_name_to_id", {})
+        )
+
+    @property
+    def item_id_to_name(self) -> dict[int, str]:
+        return {v: k for k, v in self.item_name_to_id.items()}
 
 
-FLAG_TO_LOC_IDS, LOOT_FLAG_IDS = build_flag_maps(DataPackage) if DataPackage else ({}, [])
+with open('item_id_to_game_data.json', 'r', encoding='utf-8') as f:
+    ITEM_GAME_DATA: dict[str, dict] = json.load(f)
 
+_X_PAT = re.compile(r'^(.+) x(\d+)$')
 
 secret = {"uuid": "afc006ee-e0f7-47b0-838b-7d2c37ed417b"}
 
-# Queue partagée entre les deux clients
 queue_serv_to_dll = asyncio.Queue()
 queue_dll_to_serv = asyncio.Queue()
 
-# Client Archipelago (communication avec le serveur Archipelago)
+game_data = GameData()
+
 
 async def server_archi():
-    global DataPackage, FLAG_TO_LOC_IDS, LOOT_FLAG_IDS
+    received_idx = 0
     while True:
         try:
             async with websockets.connect(server) as websocket:
-                # 1. RoomInfo
                 raw = await websocket.recv()
                 print(f"Received RoomInfo: {raw}")
                 room_info = json.loads(raw)[0]
                 server_version = room_info.get("version")
 
-                # 2. GetDataPackage
-                if DataPackage == {}:
+                if game_data.is_empty:
                     await websocket.send(json.dumps([{"cmd": "GetDataPackage", "games": ["EldenRing"]}]))
-
-                    # 3. DataPackage
                     raw = await websocket.recv()
                     print(f"Received DataPackage: {raw[:200]}...")
-                    DataPackage = json.loads(raw)[0]
-                    print(DataPackage["data"]["games"]["EldenRing"].keys())
+                    game_data.update(json.loads(raw)[0])
 
-                    with open('datapackage_eldenring.json', 'w', encoding='utf-8') as f:
-                        json.dump(DataPackage, f, indent=4, ensure_ascii=False)
-                    print("DataPackage saved to datapackage_eldenring.json")
-
-                    FLAG_TO_LOC_IDS, LOOT_FLAG_IDS = build_flag_maps(DataPackage)
-
-                # 4. Connect
                 await websocket.send(json.dumps([{
                     "cmd": "Connect",
                     "password": config.get('password', ''),
@@ -97,7 +132,6 @@ async def server_archi():
                     "slot_data": False
                 }]))
 
-                # 5. Connected ou ConnectionRefused
                 raw = await websocket.recv()
                 response = json.loads(raw)[0]
 
@@ -107,60 +141,81 @@ async def server_archi():
 
                 missing = response.get("missing_locations", [])
                 checked = response.get("checked_locations", [])
-
                 print(f"Connected! Team={response['team']} Slot={response['slot']}")
-                print(f"Missing locations: {len(missing)} | first: {missing[:3]} ... last: {missing[-3:]}")
-                print(f"Checked locations: {len(checked)}")
+                print(f"Missing: {len(missing)} | Checked: {len(checked)}")
 
-               # Tâche séparée pour envoyer les messages de la DLL vers AP
                 async def send_loop():
                     while True:
                         msg = await queue_dll_to_serv.get()
                         print(f"[Server] Envoi vers AP: {msg}")
                         await websocket.send(json.dumps(msg))
 
-                # Tâche séparée pour recevoir les messages AP (pas forwardé à DLL)
                 async def recv_loop():
+                    nonlocal received_idx
+                    id_to_name = game_data.item_id_to_name
                     async for message in websocket:
                         parsed = json.loads(message)
-                        print(f"[Server] Event AP: {parsed}")
+                        if isinstance(parsed, list) and parsed[0].get("cmd") == "ReceivedItems":
+                            items = parsed[0].get("items", [])
+                            index = parsed[0].get("index", 0)
+                            print(f"[Server] ReceivedItems: index={index}, count={len(items)}")
+                            for i, it in enumerate(items):
+                                idx = index + i
+                                if idx < received_idx:
+                                    continue
+                                item_id = it.get("item")
+                                name = id_to_name.get(item_id)
+                                if name is None:
+                                    print(f"[Server]   [{idx}] item_id={item_id} inconnu, skip")
+                                    continue
+                                m = _X_PAT.match(name)
+                                if m:
+                                    base_name = m.group(1)
+                                    qty = int(m.group(2))
+                                else:
+                                    base_name = name
+                                    qty = 1
+                                gd = ITEM_GAME_DATA.get(base_name)
+                                if gd is None:
+                                    print(f"[Server]   [{idx}] {name}: pas de game data, skip")
+                                    continue
+                                url = f"http://127.0.0.1:12999/give?base_id={gd['id']}&type={gd['type']}&qty={qty}"
+                                try:
+                                    urllib.request.urlopen(url, timeout=2)
+                                    print(f"[Server]   [{idx}] {name} → /give OK (qty={qty})")
+                                except Exception as e:
+                                    print(f"[Server]   [{idx}] {name} → /give FAIL: {e}")
+                                await asyncio.sleep(0.05)
+                                received_idx = idx + 1
+                        else:
+                            print(f"[Server] Event AP: {parsed}")
 
                 await asyncio.gather(send_loop(), recv_loop())
 
-
         except Exception as e:
-            print(f"Connection error: {e}. Retrying in 5 seconds...")
+            print(f"Connection error: {e}. Retry in 5s...")
             await asyncio.sleep(5)
 
-# Client DLL 
 
 async def dll():
-    global LOOT_FLAG_IDS
     while True:
         try:
-
-
             async with websockets.connect("ws://127.0.0.1:12999/ws", ping_interval=20, ping_timeout=10) as websocket:
                 print("[DLL] Connecté")
 
-                # Envoyer la liste des flags à surveiller
-                if LOOT_FLAG_IDS:
-                    # Convertir les strings en entiers
-                    loot_flags_int = [int(flag) for flag in LOOT_FLAG_IDS]
-                    loot_msg = {"set_flag_loot": loot_flags_int}
-                    print(f"[DLL] Envoi de {len(loot_flags_int)} flags à surveiller")
-                    print(f"[DLL] Flags envoyés: {loot_flags_int[:10]}{'...' if len(loot_flags_int) > 10 else ''}")
-                    print(f"[DLL] Message complet: {json.dumps(loot_msg)[:500]}...")
+                flags = game_data.watch_flags()
+                if flags:
+                    loot_msg = {"set_flag_loot": flags}
+                    print(f"[DLL] Envoi de {len(flags)} flags à surveiller")
                     await websocket.send(json.dumps(loot_msg))
                     try:
                         resp = await asyncio.wait_for(websocket.recv(), timeout=5.0)
                         print(f"[DLL] Réponse set_flag_loot: {resp}")
                     except asyncio.TimeoutError:
-                        print("[DLL] Timeout en attente de réponse set_flag_loot (continuant...)")
-                        # Continue anyway - the server might not send an ack
+                        print("[DLL] Timeout set_flag_loot (continuant...)")
 
                 async def recv_loop():
-                    pending_locs = set()
+                    pending_locs: set[int] = set()
 
                     async def flush():
                         if pending_locs:
@@ -174,14 +229,11 @@ async def dll():
                         async for message in websocket:
                             parsed = json.loads(message)
                             print(f"[DLL] Event: {parsed}")
-
                             if isinstance(parsed, dict) and parsed.get("type") == "flag_set":
                                 if parsed.get("value") == 1:
-                                    fid = str(parsed["flag_id"])
-                                    loc_ids = FLAG_TO_LOC_IDS.get(fid, [])
-                                    print(f"[DLL] Flag {fid} set -> locations: {loc_ids}")
-                                    if loc_ids:
-                                        pending_locs.update(loc_ids)
+                                    locs = game_data.locs_for_flag(parsed["flag_id"])
+                                    print(f"[DLL] Flag {parsed['flag_id']} → locations: {locs}")
+                                    pending_locs.update(locs)
 
                     async def flusher():
                         while True:
@@ -193,13 +245,11 @@ async def dll():
                 await recv_loop()
 
         except Exception as e:
-            print(f"[DLL_serveur] Error: {e}. Retrying in 5 seconds...")
+            print(f"[DLL] Error: {e}. Retry in 5s...")
             await asyncio.sleep(5)
 
+
 async def main():
-    await asyncio.gather(
-        server_archi(),
-        dll()
-    )
+    await asyncio.gather(server_archi(), dll())
 
 asyncio.run(main())
