@@ -119,3 +119,215 @@ Notice (Player Xenon in team 1): Now that you are connected, you can use !help t
 (Team #1) Xenon sent Smithing Stone [7] to Xenon (LG/(SC): Wandering Noble Ashes - room at end of hall after latter)
 Notice (all): Xenon (Team #1) has left the game. Client(0.6.7), [].
 connection closed
+
+(venv) [xenon@xenonarch Archipelago_ws_py]$ python ap_client.py 
+[DLL] Connecté
+Warning: entrée invalide loc_id=Golden Rune [5] flag=1047407000: invalid literal for int() with base 10: 'Golden Rune [5]'
+[DLL] Envoi de 4041 flags à surveiller
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+[DLL] Réponse set_flag_loot: {"status":"flag_loot_updated"}
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Connection error: Multiple exceptions: [Errno 111] Connect call failed ('::1', 38281, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 38281). Retry in 5s...
+Received RoomInfo: [{"cmd":"RoomInfo","password":false,"games":["Archipelago","ChecksFinder","EldenRing"],"tags":["AP"],"version":{"major":0,"minor":6,"build":7,"class":"Version"},"generator_version":{"major":0,"minor":6,"build":7,"class":"Version"},"permissions":{"release":6,"remaining":2,"collect":6},"hint_cost":10,"location_check_points":1,"datapackage_checksums":{"Archipelago":"ac9141e9ad0318df2fa27da5f20c50a842afeecb","ChecksFinder":"fa1495135d77947e94aeec67ace94286ba5892b2","EldenRing":"d703190fb282141192e168812f970382044c91a1"},"seed_name":"69694857207412785081","time":1779309653.0146}]
+Connected! Team=0 Slot=2
+Missing: 3716 | Checked: 24
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': 'Xenon (Team #1) playing EldenRing has joined. Client(0.6.7), [].'}], 'type': 'Join', 'team': 0, 'slot': 2, 'tags': []}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': 'Now that you are connected, you can use !help to list commands to run via the server. If your client supports it, you may have additional local commands you can list with /help.'}], 'type': 'Tutorial'}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 510030, 'value': 1}
+[DLL] Flag 510030 → locations: [7001059, 7001060]
+[DLL] → LocationChecks batch: 2 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7001059, 7001060]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '69699', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7001060', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 69699, 'location': 7001060, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}, {'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70377', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7001059', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70377, 'location': 7001059, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=24, count=2
+[Server]   [24] Maliketh's Armor: pas de game data, skip
+[Server]   [25] Golden Rune [3] → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 26, 'checked_locations': [7001059, 7001060]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 60310, 'value': 1}
+[DLL] Flag 60310 → locations: [7000185]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 60220, 'value': 1}
+[DLL] Flag 60220 → locations: [7000184]
+[DLL] → LocationChecks batch: 2 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000184, 7000185]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 530100, 'value': 1}
+[DLL] Flag 530100 → locations: [7000238]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000238]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70378', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000238', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70378, 'location': 7000238, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=26, count=1
+[Server]   [26] Golden Rune [4] → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 27, 'checked_locations': [7000238]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042367030, 'value': 1}
+[DLL] Flag 1042367030 → locations: [7000240]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000240]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042367060, 'value': 1}
+[DLL] Flag 1042367060 → locations: [7000243]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000243]}]
+
+(venv) [xenon@xenonarch Archipelago_ws_py]$ python ap_client.py 
+[DLL] Connecté
+Warning: entrée invalide loc_id=Golden Rune [5] flag=1047407000: invalid literal for int() with base 10: 'Golden Rune [5]'
+[DLL] Envoi de 4041 flags à surveiller
+Received RoomInfo: [{"cmd":"RoomInfo","password":false,"games":["Archipelago","ChecksFinder","EldenRing"],"tags":["AP"],"version":{"major":0,"minor":6,"build":7,"class":"Version"},"generator_version":{"major":0,"minor":6,"build":7,"class":"Version"},"permissions":{"release":6,"remaining":2,"collect":6},"hint_cost":10,"location_check_points":1,"datapackage_checksums":{"Archipelago":"ac9141e9ad0318df2fa27da5f20c50a842afeecb","ChecksFinder":"fa1495135d77947e94aeec67ace94286ba5892b2","EldenRing":"d703190fb282141192e168812f970382044c91a1"},"seed_name":"69694857207412785081","time":1779309972.057516}]
+Connected! Team=0 Slot=2
+Missing: 3713 | Checked: 27
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': 'Xenon (Team #1) playing EldenRing has joined. Client(0.6.7), [].'}], 'type': 'Join', 'team': 0, 'slot': 2, 'tags': []}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': 'Now that you are connected, you can use !help to list commands to run via the server. If your client supports it, you may have additional local commands you can list with /help.'}], 'type': 'Tutorial'}]
+[DLL] Réponse set_flag_loot: {"status":"flag_loot_updated"}
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042377010, 'value': 1}
+[DLL] Flag 1042377010 → locations: [7000247]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000247]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70580', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000247', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70580, 'location': 7000247, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=27, count=1
+[Server]   [27] Bestial Vitality → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 28, 'checked_locations': [7000247]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042377060, 'value': 1}
+[DLL] Flag 1042377060 → locations: [7000248]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000248]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042377070, 'value': 1}
+[DLL] Flag 1042377070 → locations: [7000249]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000249]}]
+
+(venv) [xenon@xenonarch Archipelago_ws_py]$ python ap_client.py 
+[DLL] Connecté
+Warning: entrée invalide loc_id=Golden Rune [5] flag=1047407000: invalid literal for int() with base 10: 'Golden Rune [5]'
+[DLL] Envoi de 4041 flags à surveiller
+Received RoomInfo: [{"cmd":"RoomInfo","password":false,"games":["Archipelago","ChecksFinder","EldenRing"],"tags":["AP"],"version":{"major":0,"minor":6,"build":7,"class":"Version"},"generator_version":{"major":0,"minor":6,"build":7,"class":"Version"},"permissions":{"release":6,"remaining":2,"collect":6},"hint_cost":10,"location_check_points":1,"datapackage_checksums":{"Archipelago":"ac9141e9ad0318df2fa27da5f20c50a842afeecb","ChecksFinder":"fa1495135d77947e94aeec67ace94286ba5892b2","EldenRing":"d703190fb282141192e168812f970382044c91a1"},"seed_name":"69694857207412785081","time":1779310189.1576421}]
+Connected! Team=0 Slot=2
+Missing: 3712 | Checked: 28
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': 'Xenon (Team #1) playing EldenRing has joined. Client(0.6.7), [].'}], 'type': 'Join', 'team': 0, 'slot': 2, 'tags': []}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': 'Now that you are connected, you can use !help to list commands to run via the server. If your client supports it, you may have additional local commands you can list with /help.'}], 'type': 'Tutorial'}]
+[DLL] Réponse set_flag_loot: {"status":"flag_loot_updated"}
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042387140, 'value': 1}
+[DLL] Flag 1042387140 → locations: [7000263]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000263]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '69107', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000263', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 69107, 'location': 7000263, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=28, count=1
+[Server]   [28] Moonveil → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 29, 'checked_locations': [7000263]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1042387010, 'value': 1}
+[DLL] Flag 1042387010 → locations: [7000252]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000252]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '71012', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000252', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 71012, 'location': 7000252, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=29, count=1
+[Server]   [29] Ghost Glovewort [4] → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 30, 'checked_locations': [7000252]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1041387100, 'value': 1}
+[DLL] Flag 1041387100 → locations: [7000147]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000147]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' sent '}, {'text': '80002', 'player': 1, 'flags': 1, 'type': 'item_id'}, {'text': ' to '}, {'text': '1', 'type': 'player_id'}, {'text': ' ('}, {'text': '7000147', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 1, 'item': {'item': 80002, 'location': 7000147, 'player': 2, 'flags': 1, 'class': 'NetworkItem'}}]
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 31, 'checked_locations': [7000147]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1041387030, 'value': 1}
+[DLL] Flag 1041387030 → locations: [7000144]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000144]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70375', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000144', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70375, 'location': 7000144, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=30, count=1
+[Server]   [30] Golden Rune [2] → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 32, 'checked_locations': [7000144]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 1041387040, 'value': 1}
+[DLL] Flag 1041387040 → locations: [7000145]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000145]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70528', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000145', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70528, 'location': 7000145, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=31, count=1
+[Server]   [31] Flame, Grant Me Strength → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 33, 'checked_locations': [7000145]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 400190, 'value': 1}
+[DLL] Flag 400190 → locations: [7000140]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000140]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70422', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000140', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70422, 'location': 7000140, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=32, count=1
+[Server]   [32] Glintstone Scrap x3 → /give OK (qty=3)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 34, 'checked_locations': [7000140]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 540104, 'value': 1}
+[DLL] Flag 540104 → locations: [7000142]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000142]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '69346', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000142', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 69346, 'location': 7000142, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=33, count=1
+[Server]   [33] Giant's Seal → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 35, 'checked_locations': [7000142]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 60510, 'value': 1}
+[DLL] Flag 60510 → locations: [7000166]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000166]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70952', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000166', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70952, 'location': 7000166, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=34, count=1
+[Server]   [34] Smithing Stone [4] → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 36, 'checked_locations': [7000166]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 10007520, 'value': 1}
+[DLL] Flag 10007520 → locations: [7000073]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000073]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70109', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000073', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70109, 'location': 7000073, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=35, count=1
+[Server]   [35] Spelldrake Talisman → /give OK (qty=1)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 37, 'checked_locations': [7000073]}]
+[DLL] Event: {'type': 'flag_set', 'flag_id': 10007530, 'value': 1}
+[DLL] Flag 10007530 → locations: [7000074]
+[DLL] → LocationChecks batch: 1 locs
+[Server] Envoi vers AP: [{'cmd': 'LocationChecks', 'locations': [7000074]}]
+[Server] Event AP: [{'cmd': 'PrintJSON', 'data': [{'text': '2', 'type': 'player_id'}, {'text': ' found their '}, {'text': '70950', 'player': 2, 'flags': 0, 'type': 'item_id'}, {'text': ' ('}, {'text': '7000074', 'player': 2, 'type': 'location_id'}, {'text': ')'}], 'type': 'ItemSend', 'receiving': 2, 'item': {'item': 70950, 'location': 7000074, 'player': 2, 'flags': 0, 'class': 'NetworkItem'}}]
+[Server] ReceivedItems: index=36, count=1
+[Server]   [36] Smithing Stone [3] x3 → /give OK (qty=3)
+[Server] Event AP: [{'cmd': 'RoomUpdate', 'hint_points': 38, 'checked_locations': [7000074]}]
+
+[xenon@xenonarch Modding]$ ../serveur/venv/bin/python ../serveur/MultiServer.py
+/home/xenon/Downloads/ArchipelagoEldenRing/serveur/NetUtils.py:533: UserWarning: _speedups not available. Falling back to pure python LocationStore. Install a matching C++ compiler for your platform to compile _speedups.
+  warnings.warn("_speedups not available. Falling back to pure python LocationStore. "
+Archipelago (0.6.7) logging initialized on Linux-7.0.8-arch1-1-x86_64-with-glibc2.43 process 18857 running Python 3.11.14
+Opening file input dialog for Select multiworld data.
+Loading embedded data package for game ChecksFinder
+Loading embedded data package for game EldenRing
+Loading embedded data package for game Archipelago
+Loaded save file with 24 received items for 1 players
+Hosting game at 109.223.7.5:38281 (No password)
+server listening on [::]:38281
+server listening on 0.0.0.0:38281
+connection open
+Notice (all): Xenon (Team #1) playing EldenRing has joined. Client(0.6.7), [].
+Notice (Player Xenon in team 1): Now that you are connected, you can use !help to list commands to run via the server. If your client supports it, you may have additional local commands you can list with /help.
+(Team #1) Xenon sent Maliketh's Armor to Xenon (LL/(TFB/CA): Golden Beast Crest Shield - boss drop)
+(Team #1) Xenon sent Golden Rune [3] to Xenon (LL/(TFB/CA): Ornamental Straight Sword - boss drop)
+(Team #1) Xenon sent Golden Rune [4] to Xenon (LG/TFS: Golden Halberd - first field boss)
+Notice (all): Xenon (Team #1) has left the game. Client(0.6.7), [].
+connection closed
+connection open
+Notice (all): Xenon (Team #1) playing EldenRing has joined. Client(0.6.7), [].
+Notice (Player Xenon in team 1): Now that you are connected, you can use !help to list commands to run via the server. If your client supports it, you may have additional local commands you can list with /help.
+(Team #1) Xenon sent Bestial Vitality to Xenon (LG/GC: Kukri x4 - E of GC)
+Notice (all): Xenon (Team #1) has left the game. Client(0.6.7), [].
+connection closed
+connection open
+Notice (all): Xenon (Team #1) playing EldenRing has joined. Client(0.6.7), [].
+Notice (Player Xenon in team 1): Now that you are connected, you can use !help to list commands to run via the server. If your client supports it, you may have additional local commands you can list with /help.
+(Team #1) Xenon sent Moonveil to Xenon (LG/(SG): Lump of Flesh - lower area)
+(Team #1) Xenon sent Ghost Glovewort [4] to Xenon (LG/(SG): Golden Rune [1] - lower area)
+(Team #1) Xenon sent Map Bombs to TestPlayer (LG/SS: Golden Seed - seedtree SE of SS)
+(Team #1) Xenon sent Golden Rune [2] to Xenon (LG/SS: Smithing Stone [1] x3 - SE of SS)
+(Team #1) Xenon sent Flame, Grant Me Strength to Xenon (LG/(SS): Stonesword Key - near grace)
+(Team #1) Xenon sent Glintstone Scrap x3 to Xenon (LG/(SS): Spirit Jellyfish Ashes - talk to Roderika 4 times)
+(Team #1) Xenon sent Giant's Seal to Xenon (LG/SS: Ash of War: Wild Strikes - scarab NW of SS)
+(Team #1) Xenon sent Smithing Stone [4] to Xenon (SV/CT: Talisman Pouch - boss drop)
+(Team #1) Xenon sent Spelldrake Talisman to Xenon (SV/SMG: Golden Rune [1] - next to main gate)
+(Team #1) Xenon sent Smithing Stone [3] x3 to Xenon (SV/SMG: Golden Rune [2] - next to main gate)
+Notice (all): Xenon (Team #1) has left the game. Client(0.6.7), [].

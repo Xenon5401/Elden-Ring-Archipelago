@@ -29,5 +29,5 @@
 - [ ] **Options Elden Ring spécifiques** : À définir (remembrances, great runes, etc.)
 - [ ] **slot_data** : Récupérer et utiliser les slot_data du serveur AP
 - [ ] **DataPackage caching** : Sauvegarder le datapackage AP côté client
-- [ ] **PrintJSON** : Afficher les messages AP (ItemSend, Chat, Hint, etc.) dans la console
+- [x] **PrintJSON** : Afficher les messages AP (ItemSend, Chat, Hint, etc.) dans la console
 - [ ] **LocationScouts** : Scout les locations avant de les donner pour afficher les noms
