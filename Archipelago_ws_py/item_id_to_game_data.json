@@ -7158,5 +7158,3377 @@
   "Golden Vow (Consumable)": {
     "id": 2003170,
     "type": 4
+  },
+  "Academy Glintstone Key (Thops)": {
+    "id": 8109,
+    "type": 4
+  },
+  "Agheel's Flame": {
+    "id": 7001,
+    "type": 4
+  },
+  "Alabaster Lord's Sword": {
+    "id": 3070000,
+    "type": 0
+  },
+  "Albinauric Bow": {
+    "id": 41010000,
+    "type": 0
+  },
+  "Albinauric Shield": {
+    "id": 31040000,
+    "type": 0
+  },
+  "Ancestral Spirit's Horn": {
+    "id": 6110,
+    "type": 4
+  },
+  "Ancient Dragon Apostle's Cookbook [2]": {
+    "id": 9401,
+    "type": 4
+  },
+  "Ancient Dragon's Blessing": {
+    "id": 2002100,
+    "type": 4
+  },
+  "Ancient Dragons' Lightning Spear": {
+    "id": 6940,
+    "type": 0
+  },
+  "Ancient Dragons' Lightning Strike": {
+    "id": 6910,
+    "type": 4
+  },
+  "Antiquity Scholar's Cookbook [1]": {
+    "id": 2009341,
+    "type": 4
+  },
+  "Aristocrat Boots": {
+    "id": 370300,
+    "type": 1
+  },
+  "Aristocrat Coat": {
+    "id": 380100,
+    "type": 4
+  },
+  "Aristocrat Garb": {
+    "id": 370100,
+    "type": 1
+  },
+  "Aristocrat Garb (Altered)": {
+    "id": 371100,
+    "type": 1
+  },
+  "Aristocrat Hat": {
+    "id": 380000,
+    "type": 4
+  },
+  "Aristocrat Headband": {
+    "id": 370000,
+    "type": 1
+  },
+  "Armorer's Cookbook [2]": {
+    "id": 9321,
+    "type": 1
+  },
+  "Armorer's Cookbook [3]": {
+    "id": 9328,
+    "type": 1
+  },
+  "As You Wish": {
+    "id": 10,
+    "type": 4
+  },
+  "Ascetic's Ankle Guards": {
+    "id": 5210300,
+    "type": 1
+  },
+  "Ascetic's Loincloth": {
+    "id": 5210100,
+    "type": 1
+  },
+  "Ascetic's Wrist Guards": {
+    "id": 5210200,
+    "type": 1
+  },
+  "Ash of War: Aspects of the Crucible: Wings": {
+    "id": 200100,
+    "type": 8
+  },
+  "Ash of War: Assassin's Gambit": {
+    "id": 60200,
+    "type": 8
+  },
+  "Ash of War: Barbaric Roar": {
+    "id": 65000,
+    "type": 8
+  },
+  "Ash of War: Barrage": {
+    "id": 40100,
+    "type": 8
+  },
+  "Ash of War: Barricade Shield": {
+    "id": 30100,
+    "type": 8
+  },
+  "Ash of War: Beast's Roar": {
+    "id": 65200,
+    "type": 8
+  },
+  "Ash of War: Black Flame Tornado": {
+    "id": 22100,
+    "type": 8
+  },
+  "Ash of War: Blinkbolt": {
+    "id": 413000,
+    "type": 8
+  },
+  "Ash of War: Blood Blade": {
+    "id": 22400,
+    "type": 8
+  },
+  "Ash of War: Blood Tax": {
+    "id": 10800,
+    "type": 8
+  },
+  "Ash of War: Bloodhound's Step": {
+    "id": 80100,
+    "type": 8
+  },
+  "Ash of War: Bloody Slash": {
+    "id": 20400,
+    "type": 8
+  },
+  "Ash of War: Carian Grandeur": {
+    "id": 21800,
+    "type": 8
+  },
+  "Ash of War: Carian Greatsword": {
+    "id": 21900,
+    "type": 8
+  },
+  "Ash of War: Carian Retaliation": {
+    "id": 30500,
+    "type": 8
+  },
+  "Ash of War: Carian Sovereignty": {
+    "id": 418000,
+    "type": 8
+  },
+  "Ash of War: Charge Forth": {
+    "id": 10500,
+    "type": 8
+  },
+  "Ash of War: Chilling Mist": {
+    "id": 22700,
+    "type": 8
+  },
+  "Ash of War: Cragblade": {
+    "id": 60700,
+    "type": 8
+  },
+  "Ash of War: Determination": {
+    "id": 60000,
+    "type": 8
+  },
+  "Ash of War: Divine Beast Frost Stomp": {
+    "id": 416000,
+    "type": 8
+  },
+  "Ash of War: Double Slash": {
+    "id": 11200,
+    "type": 8
+  },
+  "Ash of War: Dryleaf Whirlwind": {
+    "id": 200000,
+    "type": 8
+  },
+  "Ash of War: Earthshaker": {
+    "id": 21200,
+    "type": 8
+  },
+  "Ash of War: Enchanted Shot": {
+    "id": 40400,
+    "type": 8
+  },
+  "Ash of War: Endure": {
+    "id": 70000,
+    "type": 8
+  },
+  "Ash of War: Eruption": {
+    "id": 20700,
+    "type": 8
+  },
+  "Ash of War: Flame Skewer": {
+    "id": 414000,
+    "type": 8
+  },
+  "Ash of War: Flame Spear": {
+    "id": 417000,
+    "type": 8
+  },
+  "Ash of War: Flame of the Redmanes": {
+    "id": 50500,
+    "type": 8
+  },
+  "Ash of War: Flaming Strike": {
+    "id": 21400,
+    "type": 8
+  },
+  "Ash of War: Ghostflame Call": {
+    "id": 422000,
+    "type": 8
+  },
+  "Ash of War: Giant Hunt": {
+    "id": 11600,
+    "type": 8
+  },
+  "Ash of War: Glintstone Pebble": {
+    "id": 20300,
+    "type": 8
+  },
+  "Ash of War: Golden Land": {
+    "id": 21300,
+    "type": 8
+  },
+  "Ash of War: Golden Parry": {
+    "id": 30700,
+    "type": 8
+  },
+  "Ash of War: Golden Slam": {
+    "id": 50700,
+    "type": 8
+  },
+  "Ash of War: Golden Vow": {
+    "id": 60300,
+    "type": 8
+  },
+  "Ash of War: Gravitas": {
+    "id": 20900,
+    "type": 8
+  },
+  "Ash of War: Ground Slam": {
+    "id": 50600,
+    "type": 8
+  },
+  "Ash of War: Hoarah Loux's Earthshaker": {
+    "id": 50900,
+    "type": 8
+  },
+  "Ash of War: Hoarfrost Stomp": {
+    "id": 50100,
+    "type": 8
+  },
+  "Ash of War: Holy Ground": {
+    "id": 70200,
+    "type": 8
+  },
+  "Ash of War: Ice Spear": {
+    "id": 20200,
+    "type": 8
+  },
+  "Ash of War: Impaling Thrust": {
+    "id": 10100,
+    "type": 8
+  },
+  "Ash of War: Kick": {
+    "id": 50300,
+    "type": 8
+  },
+  "Ash of War: Lifesteal Fist": {
+    "id": 20500,
+    "type": 8
+  },
+  "Ash of War: Lightning Ram": {
+    "id": 50400,
+    "type": 8
+  },
+  "Ash of War: Lightning Slash": {
+    "id": 21700,
+    "type": 8
+  },
+  "Ash of War: Loretta's Slash": {
+    "id": 11800,
+    "type": 8
+  },
+  "Ash of War: Mighty Shot": {
+    "id": 40200,
+    "type": 8
+  },
+  "Ash of War: No Skill": {
+    "id": 30900,
+    "type": 8
+  },
+  "Ash of War: Parry": {
+    "id": 30200,
+    "type": 8
+  },
+  "Ash of War: Phantom Slash": {
+    "id": 22500,
+    "type": 8
+  },
+  "Ash of War: Piercing Throw": {
+    "id": 402000,
+    "type": 8
+  },
+  "Ash of War: Poison Moth Flight": {
+    "id": 11900,
+    "type": 8
+  },
+  "Ash of War: Poisonous Mist": {
+    "id": 22800,
+    "type": 8
+  },
+  "Ash of War: Prayerful Strike": {
+    "id": 20800,
+    "type": 8
+  },
+  "Ash of War: Prelate's Charge": {
+    "id": 11300,
+    "type": 8
+  },
+  "Ash of War: Quickstep": {
+    "id": 80000,
+    "type": 8
+  },
+  "Ash of War: Raging Beast": {
+    "id": 406000,
+    "type": 8
+  },
+  "Ash of War: Rain of Arrows": {
+    "id": 40600,
+    "type": 8
+  },
+  "Ash of War: Raptor of the Mists": {
+    "id": 80200,
+    "type": 8
+  },
+  "Ash of War: Repeating Thrust": {
+    "id": 10900,
+    "type": 8
+  },
+  "Ash of War: Rolling Sparks": {
+    "id": 405000,
+    "type": 8
+  },
+  "Ash of War: Royal Knight's Resolve": {
+    "id": 60100,
+    "type": 8
+  },
+  "Ash of War: Sacred Blade": {
+    "id": 20100,
+    "type": 8
+  },
+  "Ash of War: Sacred Order": {
+    "id": 60400,
+    "type": 8
+  },
+  "Ash of War: Sacred Ring of Light": {
+    "id": 22200,
+    "type": 8
+  },
+  "Ash of War: Savage Lion's Claw": {
+    "id": 415000,
+    "type": 8
+  },
+  "Ash of War: Scattershot Throw": {
+    "id": 403000,
+    "type": 8
+  },
+  "Ash of War: Seppuku": {
+    "id": 60600,
+    "type": 8
+  },
+  "Ash of War: Shared Order": {
+    "id": 60500,
+    "type": 8
+  },
+  "Ash of War: Shield Bash": {
+    "id": 30000,
+    "type": 8
+  },
+  "Ash of War: Shield Crash": {
+    "id": 30800,
+    "type": 8
+  },
+  "Ash of War: Shriek of Sorrow": {
+    "id": 419000,
+    "type": 8
+  },
+  "Ash of War: Sky Shot": {
+    "id": 40500,
+    "type": 8
+  },
+  "Ash of War: Spectral Lance": {
+    "id": 22600,
+    "type": 8
+  },
+  "Ash of War: Spinning Slash": {
+    "id": 10300,
+    "type": 8
+  },
+  "Ash of War: Spinning Weapon": {
+    "id": 12000,
+    "type": 8
+  },
+  "Ash of War: Square Off": {
+    "id": 11500,
+    "type": 8
+  },
+  "Ash of War: Stamp (Sweep)": {
+    "id": 10700,
+    "type": 8
+  },
+  "Ash of War: Stamp (Upward Cut)": {
+    "id": 10600,
+    "type": 8
+  },
+  "Ash of War: Storm Assault": {
+    "id": 12200,
+    "type": 8
+  },
+  "Ash of War: Storm Blade": {
+    "id": 21000,
+    "type": 8
+  },
+  "Ash of War: Storm Stomp": {
+    "id": 50200,
+    "type": 8
+  },
+  "Ash of War: Storm Wall": {
+    "id": 30600,
+    "type": 8
+  },
+  "Ash of War: Stormcaller": {
+    "id": 12300,
+    "type": 8
+  },
+  "Ash of War: Swift Slash": {
+    "id": 410000,
+    "type": 8
+  },
+  "Ash of War: Sword Dance": {
+    "id": 12400,
+    "type": 8
+  },
+  "Ash of War: The Poison Flower Blooms Twice": {
+    "id": 505000,
+    "type": 8
+  },
+  "Ash of War: Thops's Barrier": {
+    "id": 31000,
+    "type": 8
+  },
+  "Ash of War: Through and Through": {
+    "id": 40000,
+    "type": 8
+  },
+  "Ash of War: Thunderbolt": {
+    "id": 21600,
+    "type": 8
+  },
+  "Ash of War: Troll's Roar": {
+    "id": 65300,
+    "type": 8
+  },
+  "Ash of War: Unsheathe": {
+    "id": 11400,
+    "type": 8
+  },
+  "Ash of War: Vacuum Slice": {
+    "id": 22000,
+    "type": 8
+  },
+  "Ash of War: Vow of the Indomitable": {
+    "id": 70100,
+    "type": 8
+  },
+  "Ash of War: Wall of Sparks": {
+    "id": 404000,
+    "type": 8
+  },
+  "Ash of War: War Cry": {
+    "id": 65100,
+    "type": 8
+  },
+  "Ash of War: Waves of Darkness": {
+    "id": 50800,
+    "type": 8
+  },
+  "Ash of War: White Shadow's Lure": {
+    "id": 85000,
+    "type": 8
+  },
+  "Ash of War: Wild Strikes": {
+    "id": 11000,
+    "type": 8
+  },
+  "Ash of War: Wing Stance": {
+    "id": 412000,
+    "type": 8
+  },
+  "Assassin's Approach": {
+    "id": 6510,
+    "type": 4
+  },
+  "Astrologer Gloves": {
+    "id": 630200,
+    "type": 1
+  },
+  "Astrologer Hood": {
+    "id": 630000,
+    "type": 1
+  },
+  "Astrologer Robe": {
+    "id": 630100,
+    "type": 1
+  },
+  "Astrologer Trousers": {
+    "id": 630300,
+    "type": 1
+  },
+  "Astrologer's Staff": {
+    "id": 33130000,
+    "type": 0
+  },
+  "Axe of Godfrey": {
+    "id": 23050000,
+    "type": 0
+  },
+  "Axe of Godrick": {
+    "id": 15040000,
+    "type": 0
+  },
+  "Backhand Blade": {
+    "id": 64500000,
+    "type": 0
+  },
+  "Baldachin's Blessing": {
+    "id": 3360,
+    "type": 4
+  },
+  "Balled Up": {
+    "id": 97,
+    "type": 4
+  },
+  "Bandit Boots": {
+    "id": 930300,
+    "type": 1
+  },
+  "Bandit Garb": {
+    "id": 931100,
+    "type": 1
+  },
+  "Bandit Manchettes": {
+    "id": 930200,
+    "type": 1
+  },
+  "Bandit Mask": {
+    "id": 1401000,
+    "type": 1
+  },
+  "Bandit's Curved Sword": {
+    "id": 7040000,
+    "type": 0
+  },
+  "Banished Knight Armor": {
+    "id": 200100,
+    "type": 1
+  },
+  "Banished Knight Armor (Altered)": {
+    "id": 201100,
+    "type": 1
+  },
+  "Banished Knight Gauntlets": {
+    "id": 200200,
+    "type": 1
+  },
+  "Banished Knight Greaves": {
+    "id": 200300,
+    "type": 1
+  },
+  "Banished Knight Helm": {
+    "id": 200000,
+    "type": 1
+  },
+  "Banished Knight Helm (Altered)": {
+    "id": 201000,
+    "type": 1
+  },
+  "Banished Knight's Greatsword": {
+    "id": 3080000,
+    "type": 0
+  },
+  "Banished Knight's Halberd": {
+    "id": 18030000,
+    "type": 0
+  },
+  "Banished Knight's Shield": {
+    "id": 31030000,
+    "type": 0
+  },
+  "Bastard Sword": {
+    "id": 3000000,
+    "type": 0
+  },
+  "Bastard's Stars": {
+    "id": 13030000,
+    "type": 4
+  },
+  "Battle Axe": {
+    "id": 14000000,
+    "type": 0
+  },
+  "Battle Hammer": {
+    "id": 12020000,
+    "type": 0
+  },
+  "Battlemage Legwraps": {
+    "id": 1000300,
+    "type": 1
+  },
+  "Battlemage Manchettes": {
+    "id": 1000200,
+    "type": 1
+  },
+  "Battlemage Robe": {
+    "id": 1000100,
+    "type": 1
+  },
+  "Bayle's Flame Lightning": {
+    "id": 2007010,
+    "type": 4
+  },
+  "Bayle's Tyranny": {
+    "id": 2007000,
+    "type": 4
+  },
+  "Beast Claw (Incantation)": {
+    "id": 68500000,
+    "type": 0
+  },
+  "Beast-Repellent Torch": {
+    "id": 24060000,
+    "type": 0
+  },
+  "Beastman's Cleaver": {
+    "id": 8080000,
+    "type": 0
+  },
+  "Beastman's Curved Sword": {
+    "id": 7010000,
+    "type": 0
+  },
+  "Beastman's Jar-Shield": {
+    "id": 30060000,
+    "type": 0
+  },
+  "Beckon": {
+    "id": 23,
+    "type": 4
+  },
+  "Black Blade": {
+    "id": 90,
+    "type": 0
+  },
+  "Black Dumpling": {
+    "id": 2020000,
+    "type": 4
+  },
+  "Black Flame": {
+    "id": 6210,
+    "type": 4
+  },
+  "Black Flame Blade": {
+    "id": 6250,
+    "type": 0
+  },
+  "Black Knight Armor": {
+    "id": 5150100,
+    "type": 1
+  },
+  "Black Knight Gauntlets": {
+    "id": 5150200,
+    "type": 1
+  },
+  "Black Knight Greaves": {
+    "id": 5150300,
+    "type": 1
+  },
+  "Black Knight Helm": {
+    "id": 5150000,
+    "type": 1
+  },
+  "Black Leather Shield": {
+    "id": 31340000,
+    "type": 0
+  },
+  "Blackflame Monk Armor": {
+    "id": 351100,
+    "type": 1
+  },
+  "Blackflame Monk Gauntlets": {
+    "id": 351200,
+    "type": 1
+  },
+  "Blackflame Monk Greaves": {
+    "id": 351300,
+    "type": 1
+  },
+  "Blackflame Monk Hood": {
+    "id": 351000,
+    "type": 1
+  },
+  "Blades of Stone": {
+    "id": 2004700,
+    "type": 0
+  },
+  "Blasphemous Blade": {
+    "id": 3140000,
+    "type": 0
+  },
+  "Blessing's Boon": {
+    "id": 6430,
+    "type": 4
+  },
+  "Bloodboon": {
+    "id": 6310,
+    "type": 4
+  },
+  "Bloodfiend's Arm": {
+    "id": 12530000,
+    "type": 4
+  },
+  "Bloodfiend's Fork": {
+    "id": 16540000,
+    "type": 4
+  },
+  "Bloodfiend's Sacred Spear": {
+    "id": 16550000,
+    "type": 0
+  },
+  "Bloodhound Claws": {
+    "id": 22020000,
+    "type": 0
+  },
+  "Bloodhound Knight Armor": {
+    "id": 790100,
+    "type": 1
+  },
+  "Bloodhound Knight Gauntlets": {
+    "id": 790200,
+    "type": 1
+  },
+  "Bloodhound Knight Greaves": {
+    "id": 790300,
+    "type": 1
+  },
+  "Bloodhound Knight Helm": {
+    "id": 790000,
+    "type": 1
+  },
+  "Bloodsoaked Tabard": {
+    "id": 1870100,
+    "type": 1
+  },
+  "Bloodstained Dagger": {
+    "id": 1140000,
+    "type": 0
+  },
+  "Blue Cipher Ring": {
+    "id": 105,
+    "type": 4
+  },
+  "Blue Cloth Cowl": {
+    "id": 670000,
+    "type": 1
+  },
+  "Blue Cloth Vest": {
+    "id": 670100,
+    "type": 1
+  },
+  "Blue Crest Heater Shield": {
+    "id": 31300000,
+    "type": 0
+  },
+  "Blue Festive Garb": {
+    "id": 802100,
+    "type": 1
+  },
+  "Blue Festive Hood": {
+    "id": 802000,
+    "type": 1
+  },
+  "Blue-Gold Kite Shield": {
+    "id": 31100000,
+    "type": 0
+  },
+  "Boiled Crab": {
+    "id": 820,
+    "type": 4
+  },
+  "Boiled Prawn": {
+    "id": 8,
+    "type": 4
+  },
+  "Borealis's Mist": {
+    "id": 7021,
+    "type": 4
+  },
+  "Bow": {
+    "id": 44,
+    "type": 0
+  },
+  "Brass Shield": {
+    "id": 31130000,
+    "type": 0
+  },
+  "Bravo!": {
+    "id": 60,
+    "type": 4
+  },
+  "Briar Armor": {
+    "id": 210100,
+    "type": 1
+  },
+  "Briar Gauntlets": {
+    "id": 210200,
+    "type": 1
+  },
+  "Briar Greaves": {
+    "id": 210300,
+    "type": 1
+  },
+  "Briar Helm": {
+    "id": 210000,
+    "type": 1
+  },
+  "Briars of Sin": {
+    "id": 4900,
+    "type": 4
+  },
+  "Broadsword": {
+    "id": 2020000,
+    "type": 0
+  },
+  "Buckler": {
+    "id": 30000000,
+    "type": 4
+  },
+  "Burn, O Flame!": {
+    "id": 6120,
+    "type": 4
+  },
+  "By My Sword": {
+    "id": 52,
+    "type": 0
+  },
+  "Caestus": {
+    "id": 21000000,
+    "type": 0
+  },
+  "Calm Down!": {
+    "id": 25,
+    "type": 4
+  },
+  "Carian Filigreed Crest": {
+    "id": 6020,
+    "type": 4
+  },
+  "Carian Greatsword": {
+    "id": 4430,
+    "type": 0
+  },
+  "Carian Phalanx": {
+    "id": 4301,
+    "type": 4
+  },
+  "Carian Regal Scepter": {
+    "id": 33090000,
+    "type": 4
+  },
+  "Carian Retaliation": {
+    "id": 4640,
+    "type": 4
+  },
+  "Carian Slicer": {
+    "id": 4440,
+    "type": 4
+  },
+  "Casual Greeting": {
+    "id": 8,
+    "type": 4
+  },
+  "Catch Flame": {
+    "id": 6000,
+    "type": 4
+  },
+  "Celebrant's Cleaver": {
+    "id": 14060000,
+    "type": 0
+  },
+  "Celebrant's Rib-Rake": {
+    "id": 16060000,
+    "type": 4
+  },
+  "Celebrant's Sickle": {
+    "id": 1060000,
+    "type": 0
+  },
+  "Cerulean Crystal Tear (Alternate)": {
+    "id": 11004,
+    "type": 4
+  },
+  "Chain Armor": {
+    "id": 1100100,
+    "type": 1
+  },
+  "Chain Coif": {
+    "id": 1100000,
+    "type": 1
+  },
+  "Chain Leggings": {
+    "id": 1100300,
+    "type": 1
+  },
+  "Chain-Draped Tabard": {
+    "id": 1830100,
+    "type": 1
+  },
+  "Chainlink Flail": {
+    "id": 13040000,
+    "type": 0
+  },
+  "Champion Bracers": {
+    "id": 730200,
+    "type": 1
+  },
+  "Champion Gaiters": {
+    "id": 730300,
+    "type": 1
+  },
+  "Champion Headband": {
+    "id": 730000,
+    "type": 1
+  },
+  "Champion Pauldron": {
+    "id": 730100,
+    "type": 4
+  },
+  "Clayman's Harpoon": {
+    "id": 16030000,
+    "type": 4
+  },
+  "Cleanrot Armor": {
+    "id": 340100,
+    "type": 1
+  },
+  "Cleanrot Gauntlets": {
+    "id": 340200,
+    "type": 1
+  },
+  "Cleanrot Greaves": {
+    "id": 340300,
+    "type": 1
+  },
+  "Cleanrot Helm": {
+    "id": 340000,
+    "type": 1
+  },
+  "Cleanrot Knight's Sword": {
+    "id": 5010000,
+    "type": 0
+  },
+  "Cleanrot Spear": {
+    "id": 16040000,
+    "type": 0
+  },
+  "Club": {
+    "id": 11010000,
+    "type": 0
+  },
+  "Common Soldier Cloth Armor": {
+    "id": 5240100,
+    "type": 1
+  },
+  "Common Soldier Gauntlets": {
+    "id": 5240200,
+    "type": 1
+  },
+  "Common Soldier Greaves": {
+    "id": 5240300,
+    "type": 1
+  },
+  "Common Soldier Helm": {
+    "id": 5240000,
+    "type": 1
+  },
+  "Commoner's Garb": {
+    "id": 810100,
+    "type": 1
+  },
+  "Commoner's Headband (Altered)": {
+    "id": 811000,
+    "type": 1
+  },
+  "Commoner's Shoes": {
+    "id": 810300,
+    "type": 1
+  },
+  "Cracked Crystal": {
+    "id": 20780,
+    "type": 4
+  },
+  "Crafting Kit": {
+    "id": 8500,
+    "type": 4
+  },
+  "Crescent Moon Axe": {
+    "id": 15030000,
+    "type": 0
+  },
+  "Crimson Amber Medallion": {
+    "id": 1,
+    "type": 4
+  },
+  "Crimson Crystal Tear (Alternate)": {
+    "id": 11002,
+    "type": 4
+  },
+  "Crossed Legs": {
+    "id": 91,
+    "type": 4
+  },
+  "Crossed-Tree Towershield": {
+    "id": 32200000,
+    "type": 0
+  },
+  "Crystal Barrage": {
+    "id": 4060,
+    "type": 4
+  },
+  "Cuckoo Greatshield": {
+    "id": 32250000,
+    "type": 0
+  },
+  "Cuckoo Knight Armor": {
+    "id": 1780100,
+    "type": 1
+  },
+  "Cuckoo Knight Gauntlets": {
+    "id": 1780200,
+    "type": 1
+  },
+  "Cuckoo Knight Greaves": {
+    "id": 1780300,
+    "type": 1
+  },
+  "Cuckoo Knight Helm": {
+    "id": 1780000,
+    "type": 1
+  },
+  "Cuckoo Surcoat": {
+    "id": 1710100,
+    "type": 1
+  },
+  "Cure Poison": {
+    "id": 6440,
+    "type": 4
+  },
+  "Curseblade Mask": {
+    "id": 5210000,
+    "type": 1
+  },
+  "Curseblade's Cirque": {
+    "id": 64520000,
+    "type": 0
+  },
+  "Curtsy": {
+    "id": 6,
+    "type": 4
+  },
+  "Curved Club": {
+    "id": 11030000,
+    "type": 0
+  },
+  "Curved Great Club": {
+    "id": 12080000,
+    "type": 0
+  },
+  "Dagger": {
+    "id": 1000000,
+    "type": 0
+  },
+  "Darkness": {
+    "id": 6530,
+    "type": 4
+  },
+  "Deadly Poison Perfume Bottle": {
+    "id": 61540000,
+    "type": 0
+  },
+  "Death Lightning": {
+    "id": 5040,
+    "type": 4
+  },
+  "Dejection": {
+    "id": 80,
+    "type": 4
+  },
+  "Depraved Perfumer Gloves": {
+    "id": 540200,
+    "type": 1
+  },
+  "Depraved Perfumer Headscarf": {
+    "id": 540000,
+    "type": 0
+  },
+  "Depraved Perfumer Robe": {
+    "id": 540100,
+    "type": 1
+  },
+  "Depraved Perfumer Trousers": {
+    "id": 540300,
+    "type": 1
+  },
+  "Desperate Prayer": {
+    "id": 101,
+    "type": 4
+  },
+  "Dewkissed Herba": {
+    "id": 20710,
+    "type": 4
+  },
+  "Digger's Staff": {
+    "id": 33120000,
+    "type": 0
+  },
+  "Dirty Chainmail": {
+    "id": 1060100,
+    "type": 1
+  },
+  "Discus of Light": {
+    "id": 6700,
+    "type": 4
+  },
+  "Dismounter": {
+    "id": 8020000,
+    "type": 4
+  },
+  "Distinguished Greatshield": {
+    "id": 32020000,
+    "type": 0
+  },
+  "Divine Beast Helm": {
+    "id": 5252000,
+    "type": 1
+  },
+  "Divine Beast Warrior Armor": {
+    "id": 5252100,
+    "type": 1
+  },
+  "Divine Bird Helm": {
+    "id": 5253000,
+    "type": 1
+  },
+  "Divine Bird Warrior Armor": {
+    "id": 5253100,
+    "type": 1
+  },
+  "Divine Bird Warrior Gauntlets": {
+    "id": 5253200,
+    "type": 1
+  },
+  "Divine Bird Warrior Greaves": {
+    "id": 5253300,
+    "type": 1
+  },
+  "Dozing Cross-Legged": {
+    "id": 94,
+    "type": 4
+  },
+  "Dragon Communion Seal": {
+    "id": 34080000,
+    "type": 4
+  },
+  "Dragon King's Cragblade": {
+    "id": 6040000,
+    "type": 0
+  },
+  "Dragon's Calorbloom": {
+    "id": 2020023,
+    "type": 4
+  },
+  "Dragonclaw": {
+    "id": 7060,
+    "type": 0
+  },
+  "Dragonfire": {
+    "id": 7000,
+    "type": 4
+  },
+  "Dragonice": {
+    "id": 7020,
+    "type": 4
+  },
+  "Dragonmaw": {
+    "id": 7080,
+    "type": 4
+  },
+  "Dryleaf Arts": {
+    "id": 60500000,
+    "type": 4
+  },
+  "Dueling Shield": {
+    "id": 62500000,
+    "type": 0
+  },
+  "Duelist Greataxe": {
+    "id": 23040000,
+    "type": 0
+  },
+  "Duelist Greaves": {
+    "id": 310300,
+    "type": 1
+  },
+  "Duelist Helm": {
+    "id": 310000,
+    "type": 1
+  },
+  "Dung Eater Puppet": {
+    "id": 260000,
+    "type": 4
+  },
+  "Eclipse Crest Greatshield": {
+    "id": 32240000,
+    "type": 0
+  },
+  "Ekzykes's Decay": {
+    "id": 7031,
+    "type": 4
+  },
+  "Elden Lord Armor": {
+    "id": 460100,
+    "type": 1
+  },
+  "Elden Lord Bracers": {
+    "id": 460200,
+    "type": 1
+  },
+  "Elden Lord Crown": {
+    "id": 460000,
+    "type": 1
+  },
+  "Elden Lord Greaves": {
+    "id": 460300,
+    "type": 1
+  },
+  "Electrify Armament": {
+    "id": 6960,
+    "type": 4
+  },
+  "Empyrean-Blood Burgeon": {
+    "id": 2020025,
+    "type": 4
+  },
+  "Enraged Divine Beast": {
+    "id": 8180,
+    "type": 4
+  },
+  "Envoy's Greathorn": {
+    "id": 23030000,
+    "type": 4
+  },
+  "Envoy's Horn": {
+    "id": 11100000,
+    "type": 4
+  },
+  "Envoy's Long Horn": {
+    "id": 12160000,
+    "type": 4
+  },
+  "Erdleaf Flower": {
+    "id": 20680,
+    "type": 4
+  },
+  "Erdtree Surcoat": {
+    "id": 1720100,
+    "type": 1
+  },
+  "Erudition": {
+    "id": 103,
+    "type": 4
+  },
+  "Estoc": {
+    "id": 5000000,
+    "type": 0
+  },
+  "Executioner's Greataxe": {
+    "id": 15080000,
+    "type": 0
+  },
+  "Exile Armor": {
+    "id": 190100,
+    "type": 1
+  },
+  "Exile Gauntlets": {
+    "id": 190200,
+    "type": 1
+  },
+  "Exile Greaves": {
+    "id": 190300,
+    "type": 1
+  },
+  "Exile Hood": {
+    "id": 190000,
+    "type": 1
+  },
+  "Explosive Stone": {
+    "id": 1830,
+    "type": 4
+  },
+  "Extreme Repentance": {
+    "id": 40,
+    "type": 4
+  },
+  "Faded Erdleaf Flower": {
+    "id": 20660,
+    "type": 4
+  },
+  "Falchion": {
+    "id": 7000000,
+    "type": 4
+  },
+  "Fancy Spin": {
+    "id": 72,
+    "type": 4
+  },
+  "Fanged Imp Ashes": {
+    "id": 4,
+    "type": 4
+  },
+  "Fell Omen Cloak": {
+    "id": 1050100,
+    "type": 1
+  },
+  "Festive Garb": {
+    "id": 800100,
+    "type": 1
+  },
+  "Festive Garb (Altered)": {
+    "id": 801100,
+    "type": 1
+  },
+  "Festive Hood": {
+    "id": 800000,
+    "type": 1
+  },
+  "Fevor's Cookbook [2]": {
+    "id": 9422,
+    "type": 4
+  },
+  "Finger Maiden Therolina Puppet": {
+    "id": 261000,
+    "type": 4
+  },
+  "Finger Mimic": {
+    "id": 2020024,
+    "type": 4
+  },
+  "Finger Seal": {
+    "id": 34000000,
+    "type": 4
+  },
+  "Finger Snap": {
+    "id": 73,
+    "type": 4
+  },
+  "Fire Knight Armor": {
+    "id": 5180100,
+    "type": 1
+  },
+  "Fire Knight Gauntlets": {
+    "id": 5180200,
+    "type": 1
+  },
+  "Fire Knight Greaves": {
+    "id": 5180300,
+    "type": 1
+  },
+  "Fire Knight Helm": {
+    "id": 5180000,
+    "type": 1
+  },
+  "Fire Knight's Greatsword": {
+    "id": 4520000,
+    "type": 0
+  },
+  "Fire Knight's Shortsword": {
+    "id": 1510000,
+    "type": 0
+  },
+  "Fire Monk Armor": {
+    "id": 350100,
+    "type": 1
+  },
+  "Fire Monk Gauntlets": {
+    "id": 350200,
+    "type": 1
+  },
+  "Fire Monk Greaves": {
+    "id": 350300,
+    "type": 1
+  },
+  "Fire Monk Hood": {
+    "id": 350000,
+    "type": 1
+  },
+  "Fire Prelate Armor": {
+    "id": 360100,
+    "type": 1
+  },
+  "Fire Prelate Armor (Altered)": {
+    "id": 361100,
+    "type": 1
+  },
+  "Fire Prelate Gauntlets": {
+    "id": 360200,
+    "type": 1
+  },
+  "Fire Prelate Greaves": {
+    "id": 360300,
+    "type": 1
+  },
+  "Fire Prelate Helm": {
+    "id": 360000,
+    "type": 1
+  },
+  "Fire Spur Me": {
+    "id": 54,
+    "type": 4
+  },
+  "Flame Fortification": {
+    "id": 6450,
+    "type": 4
+  },
+  "Flame, Fall Upon Them": {
+    "id": 6020,
+    "type": 4
+  },
+  "Fleeting Microcosm": {
+    "id": 2007410,
+    "type": 4
+  },
+  "Foot Soldier Cap": {
+    "id": 1830000,
+    "type": 1
+  },
+  "Foot Soldier Gauntlets": {
+    "id": 1830200,
+    "type": 1
+  },
+  "Foot Soldier Greaves": {
+    "id": 1830300,
+    "type": 1
+  },
+  "Foot Soldier Helm": {
+    "id": 1860000,
+    "type": 1
+  },
+  "Foot Soldier Helmet": {
+    "id": 1840000,
+    "type": 1
+  },
+  "Foot Soldier Tabard": {
+    "id": 1840100,
+    "type": 1
+  },
+  "Forked Greatsword": {
+    "id": 3010000,
+    "type": 0
+  },
+  "Forked Hatchet": {
+    "id": 14010000,
+    "type": 4
+  },
+  "Forked-Tongue Hatchet": {
+    "id": 14540000,
+    "type": 4
+  },
+  "Fortissax's Lightning Spear": {
+    "id": 6941,
+    "type": 0
+  },
+  "Freezing Mist": {
+    "id": 4420,
+    "type": 4
+  },
+  "Frozen Raisin": {
+    "id": 812,
+    "type": 4
+  },
+  "Fur Leggings": {
+    "id": 300300,
+    "type": 1
+  },
+  "Fur Raiment": {
+    "id": 300100,
+    "type": 1
+  },
+  "Furled Finger's Trick-Mirror": {
+    "id": 6080,
+    "type": 4
+  },
+  "Gaius's Armor": {
+    "id": 3010100,
+    "type": 1
+  },
+  "Gaius's Gauntlets": {
+    "id": 3010200,
+    "type": 1
+  },
+  "Gaius's Greaves": {
+    "id": 3010300,
+    "type": 1
+  },
+  "Gaius's Helm": {
+    "id": 3010000,
+    "type": 1
+  },
+  "Gas Stone": {
+    "id": 2020020,
+    "type": 4
+  },
+  "Gazing Finger": {
+    "id": 23520000,
+    "type": 4
+  },
+  "Gelmir Glintstone Staff": {
+    "id": 33050000,
+    "type": 0
+  },
+  "Ghostflame Breath": {
+    "id": 2007020,
+    "type": 4
+  },
+  "Giant's Red Braid": {
+    "id": 20060000,
+    "type": 4
+  },
+  "Giantsflame Take Thee": {
+    "id": 6100,
+    "type": 4
+  },
+  "Gilded Foot Soldier Cap": {
+    "id": 1850000,
+    "type": 1
+  },
+  "Gilded Greatshield": {
+    "id": 32270000,
+    "type": 0
+  },
+  "Glaive": {
+    "id": 18090000,
+    "type": 0
+  },
+  "Glintblade Phalanx": {
+    "id": 4300,
+    "type": 0
+  },
+  "Glintstone Arc": {
+    "id": 4070,
+    "type": 4
+  },
+  "Glintstone Breath": {
+    "id": 7040,
+    "type": 4
+  },
+  "Glintstone Cometshard": {
+    "id": 4020,
+    "type": 4
+  },
+  "Glintstone Craftsman's Cookbook [7]": {
+    "id": 9347,
+    "type": 4
+  },
+  "Glintstone Icecrag": {
+    "id": 4400,
+    "type": 4
+  },
+  "Glintstone Nail": {
+    "id": 2004500,
+    "type": 4
+  },
+  "Glintstone Nails": {
+    "id": 2004510,
+    "type": 4
+  },
+  "Glintstone Pebble": {
+    "id": 4000,
+    "type": 4
+  },
+  "Glintstone Staff": {
+    "id": 33000000,
+    "type": 0
+  },
+  "Glintstone Stars": {
+    "id": 4040,
+    "type": 4
+  },
+  "Godrick Knight Armor": {
+    "id": 1770100,
+    "type": 1
+  },
+  "Godrick Knight Gauntlets": {
+    "id": 1770200,
+    "type": 1
+  },
+  "Godrick Knight Greaves": {
+    "id": 1770300,
+    "type": 1
+  },
+  "Godrick Knight Helm": {
+    "id": 1770000,
+    "type": 1
+  },
+  "Godrick Soldier Gauntlets": {
+    "id": 1700200,
+    "type": 1
+  },
+  "Godrick Soldier Greaves": {
+    "id": 1700300,
+    "type": 1
+  },
+  "Godrick Soldier Helm": {
+    "id": 1700000,
+    "type": 1
+  },
+  "Golden Greatshield": {
+    "id": 32260000,
+    "type": 0
+  },
+  "Golden Order Totality": {
+    "id": 106,
+    "type": 4
+  },
+  "Golden Rowa": {
+    "id": 20721,
+    "type": 4
+  },
+  "Golden Vow (Incantation)": {
+    "id": 6600,
+    "type": 4
+  },
+  "Golem Fist": {
+    "id": 21540000,
+    "type": 0
+  },
+  "Golem Greatbow": {
+    "id": 42010000,
+    "type": 0
+  },
+  "Golem's Great Arrow": {
+    "id": 51010000,
+    "type": 4
+  },
+  "Golem's Halberd": {
+    "id": 23120000,
+    "type": 0
+  },
+  "Golem's Magic Arrow": {
+    "id": 51030000,
+    "type": 4
+  },
+  "Gourmet Scorpion Stew (Drop)": {
+    "id": 2001201,
+    "type": 4
+  },
+  "Grafted Dragon": {
+    "id": 21060000,
+    "type": 4
+  },
+  "Grave Keeper's Brainpan": {
+    "id": 2020018,
+    "type": 4
+  },
+  "Grave Scythe": {
+    "id": 19010000,
+    "type": 0
+  },
+  "Gravekeeper Cloak": {
+    "id": 310100,
+    "type": 1
+  },
+  "Gravel Stone Seal": {
+    "id": 34030000,
+    "type": 4
+  },
+  "Gravity Well": {
+    "id": 4720,
+    "type": 4
+  },
+  "Great Glintstone Shard": {
+    "id": 4001,
+    "type": 4
+  },
+  "Great Heal": {
+    "id": 6422,
+    "type": 4
+  },
+  "Great Horned Headband": {
+    "id": 300000,
+    "type": 1
+  },
+  "Great Katana": {
+    "id": 66500000,
+    "type": 0
+  },
+  "Great Knife": {
+    "id": 1090000,
+    "type": 4
+  },
+  "Greathelm": {
+    "id": 1101000,
+    "type": 1
+  },
+  "Greathorn Hammer": {
+    "id": 12010000,
+    "type": 0
+  },
+  "Greatsword of Damnation": {
+    "id": 3510000,
+    "type": 0
+  },
+  "Greatsword of Radahn (Light)": {
+    "id": 4550000,
+    "type": 0
+  },
+  "Greatsword of Radahn (Lord)": {
+    "id": 4530000,
+    "type": 0
+  },
+  "Greyoll's Roar": {
+    "id": 7090,
+    "type": 4
+  },
+  "Grossmesser": {
+    "id": 7150000,
+    "type": 4
+  },
+  "Grovel For Mercy": {
+    "id": 41,
+    "type": 4
+  },
+  "Guardian Bracers": {
+    "id": 330200,
+    "type": 1
+  },
+  "Guardian Garb": {
+    "id": 331100,
+    "type": 1
+  },
+  "Guardian Garb (Full Bloom)": {
+    "id": 330100,
+    "type": 1
+  },
+  "Guardian Greaves": {
+    "id": 330300,
+    "type": 1
+  },
+  "Guardian Mask": {
+    "id": 330000,
+    "type": 1
+  },
+  "Guardian's Swordspear": {
+    "id": 18110000,
+    "type": 0
+  },
+  "Haima Glintstone Crown": {
+    "id": 1000000,
+    "type": 1
+  },
+  "Halberd": {
+    "id": 18000000,
+    "type": 0
+  },
+  "Haligtree Crest Greatshield": {
+    "id": 32280000,
+    "type": 0
+  },
+  "Haligtree Crest Surcoat": {
+    "id": 1750100,
+    "type": 1
+  },
+  "Haligtree Gauntlets": {
+    "id": 1750200,
+    "type": 1
+  },
+  "Haligtree Greaves": {
+    "id": 1750300,
+    "type": 1
+  },
+  "Haligtree Helm": {
+    "id": 1750000,
+    "type": 1
+  },
+  "Haligtree Knight Armor": {
+    "id": 1820100,
+    "type": 1
+  },
+  "Haligtree Knight Gauntlets": {
+    "id": 1820200,
+    "type": 1
+  },
+  "Haligtree Knight Greaves": {
+    "id": 1820300,
+    "type": 1
+  },
+  "Halo Scythe": {
+    "id": 19020000,
+    "type": 0
+  },
+  "Hand Axe": {
+    "id": 14020000,
+    "type": 0
+  },
+  "Hand of Malenia": {
+    "id": 9020000,
+    "type": 0
+  },
+  "Heal": {
+    "id": 6421,
+    "type": 4
+  },
+  "Heartening Cry": {
+    "id": 51,
+    "type": 4
+  },
+  "Heater Shield": {
+    "id": 31330000,
+    "type": 0
+  },
+  "Heavy Crossbow": {
+    "id": 43030000,
+    "type": 0
+  },
+  "High Page Clothes": {
+    "id": 1990100,
+    "type": 1
+  },
+  "High Page Hood": {
+    "id": 1990000,
+    "type": 1
+  },
+  "Highwayman Cloth Armor": {
+    "id": 1980100,
+    "type": 1
+  },
+  "Highwayman Gauntlets": {
+    "id": 1980200,
+    "type": 1
+  },
+  "Highwayman Hood": {
+    "id": 1980000,
+    "type": 1
+  },
+  "Honed Bolt": {
+    "id": 6930,
+    "type": 4
+  },
+  "Horn-Strewn Excrement": {
+    "id": 2020019,
+    "type": 4
+  },
+  "Horned Warrior Armor": {
+    "id": 5250100,
+    "type": 1
+  },
+  "Horned Warrior Gauntlets": {
+    "id": 5250200,
+    "type": 1
+  },
+  "Horned Warrior Greaves": {
+    "id": 5250300,
+    "type": 1
+  },
+  "Horned Warrior Helm": {
+    "id": 5250000,
+    "type": 1
+  },
+  "Horse Crest Wooden Shield": {
+    "id": 31240000,
+    "type": 0
+  },
+  "Hoslow's Oath": {
+    "id": 106,
+    "type": 4
+  },
+  "Host's Trick-Mirror": {
+    "id": 6090,
+    "type": 4
+  },
+  "Igon's Harpoon": {
+    "id": 51500000,
+    "type": 4
+  },
+  "Immunizing Horn Charm +1": {
+    "id": 1171,
+    "type": 4
+  },
+  "Immutable Shield": {
+    "id": 6740,
+    "type": 0
+  },
+  "Imp Head (Cat)": {
+    "id": 1080000,
+    "type": 4
+  },
+  "Imp Head (Fanged)": {
+    "id": 1081000,
+    "type": 4
+  },
+  "Imp Head (Long-Tongued)": {
+    "id": 1082000,
+    "type": 4
+  },
+  "Inner Order": {
+    "id": 105,
+    "type": 4
+  },
+  "Inverted Hawk Towershield": {
+    "id": 32210000,
+    "type": 0
+  },
+  "Iron Ball": {
+    "id": 21070000,
+    "type": 4
+  },
+  "Iron Cleaver": {
+    "id": 14040000,
+    "type": 0
+  },
+  "Iron Gauntlets": {
+    "id": 40200,
+    "type": 1
+  },
+  "Iron Greatsword": {
+    "id": 3020000,
+    "type": 0
+  },
+  "Iron Helmet": {
+    "id": 40000,
+    "type": 1
+  },
+  "Iron Roundshield": {
+    "id": 30120000,
+    "type": 0
+  },
+  "Iron Spear": {
+    "id": 16150000,
+    "type": 0
+  },
+  "Ivory-Draped Tabard": {
+    "id": 1880100,
+    "type": 1
+  },
+  "Jarwight Puppet": {
+    "id": 263000,
+    "type": 4
+  },
+  "Jawbone Axe": {
+    "id": 14030000,
+    "type": 0
+  },
+  "Jolán and Anna": {
+    "id": 2220000,
+    "type": 4
+  },
+  "Jump for Joy": {
+    "id": 70,
+    "type": 4
+  },
+  "Kaiden Armor": {
+    "id": 50100,
+    "type": 1
+  },
+  "Kaiden Gauntlets": {
+    "id": 50200,
+    "type": 1
+  },
+  "Kaiden Helm": {
+    "id": 50000,
+    "type": 1
+  },
+  "Kaiden Trousers": {
+    "id": 50300,
+    "type": 1
+  },
+  "Kite Shield": {
+    "id": 31000000,
+    "type": 0
+  },
+  "Knight Armor": {
+    "id": 1500100,
+    "type": 1
+  },
+  "Knight Gauntlets": {
+    "id": 1500200,
+    "type": 1
+  },
+  "Knight Greaves": {
+    "id": 1500300,
+    "type": 1
+  },
+  "Knight Helm": {
+    "id": 1500000,
+    "type": 1
+  },
+  "Knight's Greatsword": {
+    "id": 3040000,
+    "type": 0
+  },
+  "Land of Reeds Armor": {
+    "id": 870100,
+    "type": 1
+  },
+  "Land of Reeds Gauntlets": {
+    "id": 870200,
+    "type": 1
+  },
+  "Land of Reeds Greaves": {
+    "id": 870300,
+    "type": 1
+  },
+  "Land of Reeds Helm": {
+    "id": 870000,
+    "type": 1
+  },
+  "Land of Shadow": {
+    "id": 2006680,
+    "type": 4
+  },
+  "Lantern": {
+    "id": 2070,
+    "type": 4
+  },
+  "Large Leather Shield": {
+    "id": 31230000,
+    "type": 0
+  },
+  "Larval Tear (DLC)": {
+    "id": 8185,
+    "type": 4
+  },
+  "Law of Regression": {
+    "id": 6730,
+    "type": 4
+  },
+  "Lazuli Glintstone Sword": {
+    "id": 2250000,
+    "type": 0
+  },
+  "Lazuli Robe": {
+    "id": 2030000,
+    "type": 1
+  },
+  "Leather Trousers": {
+    "id": 40300,
+    "type": 1
+  },
+  "Leather-Draped Tabard": {
+    "id": 1850100,
+    "type": 1
+  },
+  "Let Us Go Together": {
+    "id": 2009003,
+    "type": 4
+  },
+  "Letter from Volcano Manor (Istvan)": {
+    "id": 8127,
+    "type": 4
+  },
+  "Letter from Volcano Manor (Rileigh)": {
+    "id": 8127,
+    "type": 4
+  },
+  "Leyndell Knight Armor": {
+    "id": 1790100,
+    "type": 1
+  },
+  "Leyndell Knight Gauntlets": {
+    "id": 1790200,
+    "type": 1
+  },
+  "Leyndell Knight Greaves": {
+    "id": 1790300,
+    "type": 1
+  },
+  "Leyndell Knight Helm": {
+    "id": 1790000,
+    "type": 1
+  },
+  "Leyndell Soldier Gauntlets": {
+    "id": 1720200,
+    "type": 1
+  },
+  "Leyndell Soldier Greaves": {
+    "id": 1720300,
+    "type": 1
+  },
+  "Leyndell Soldier Helm": {
+    "id": 1720000,
+    "type": 1
+  },
+  "Light Crossbow": {
+    "id": 43020000,
+    "type": 0
+  },
+  "Light of Miquella": {
+    "id": 2006700,
+    "type": 4
+  },
+  "Lightning Bolt": {
+    "id": 52010000,
+    "type": 4
+  },
+  "Lightning Fortification": {
+    "id": 6470,
+    "type": 4
+  },
+  "Lightning Spear": {
+    "id": 16010600,
+    "type": 0
+  },
+  "Lion Greatbow": {
+    "id": 42000000,
+    "type": 0
+  },
+  "Litany of Proper Death": {
+    "id": 6750,
+    "type": 4
+  },
+  "Lizard Greatsword": {
+    "id": 3520000,
+    "type": 0
+  },
+  "Longbow": {
+    "id": 41000000,
+    "type": 0
+  },
+  "Longhaft Axe": {
+    "id": 15050000,
+    "type": 0
+  },
+  "Longsword": {
+    "id": 2000000,
+    "type": 0
+  },
+  "Lord of Blood's Favor (Soaked)": {
+    "id": 8154,
+    "type": 4
+  },
+  "Lord of Blood's Robe": {
+    "id": 480100,
+    "type": 1
+  },
+  "Lord's Aid": {
+    "id": 6441,
+    "type": 4
+  },
+  "Lord's Heal": {
+    "id": 6423,
+    "type": 4
+  },
+  "Lordsworn's Shield": {
+    "id": 32300000,
+    "type": 0
+  },
+  "Lordsworn's Straight Sword": {
+    "id": 2040000,
+    "type": 0
+  },
+  "Mace": {
+    "id": 11000000,
+    "type": 0
+  },
+  "Magic Fortification": {
+    "id": 6460,
+    "type": 4
+  },
+  "Magic Glintblade": {
+    "id": 4390,
+    "type": 0
+  },
+  "Magma Blade": {
+    "id": 7050000,
+    "type": 0
+  },
+  "Magma Breath": {
+    "id": 7010,
+    "type": 4
+  },
+  "Malenia's Armor": {
+    "id": 770100,
+    "type": 1
+  },
+  "Malenia's Gauntlet": {
+    "id": 770200,
+    "type": 4
+  },
+  "Malenia's Greaves": {
+    "id": 770300,
+    "type": 1
+  },
+  "Malenia's Winged Helm": {
+    "id": 770000,
+    "type": 1
+  },
+  "Maliketh's Armor": {
+    "id": 760100,
+    "type": 1
+  },
+  "Maliketh's Black Blade": {
+    "id": 4020000,
+    "type": 0
+  },
+  "Maliketh's Gauntlets": {
+    "id": 760200,
+    "type": 1
+  },
+  "Maliketh's Greaves": {
+    "id": 760300,
+    "type": 1
+  },
+  "Maliketh's Helm": {
+    "id": 760000,
+    "type": 1
+  },
+  "Man-Serpent's Shield": {
+    "id": 30020000,
+    "type": 0
+  },
+  "Mantis Blade": {
+    "id": 7120000,
+    "type": 0
+  },
+  "Margit's Shackle": {
+    "id": 2140,
+    "type": 4
+  },
+  "Marika's Hammer": {
+    "id": 11150000,
+    "type": 0
+  },
+  "Marionette Soldier Armor": {
+    "id": 840100,
+    "type": 1
+  },
+  "Marionette Soldier Birdhelm": {
+    "id": 850000,
+    "type": 1
+  },
+  "Marionette Soldier Helm": {
+    "id": 840000,
+    "type": 1
+  },
+  "Mausoleum Gauntlets": {
+    "id": 1740200,
+    "type": 1
+  },
+  "Mausoleum Greaves": {
+    "id": 1740300,
+    "type": 1
+  },
+  "Mausoleum Knight Armor": {
+    "id": 1810100,
+    "type": 1
+  },
+  "Mausoleum Knight Gauntlets": {
+    "id": 1810200,
+    "type": 1
+  },
+  "Mausoleum Knight Greaves": {
+    "id": 1810300,
+    "type": 1
+  },
+  "Mausoleum Surcoat": {
+    "id": 1740100,
+    "type": 1
+  },
+  "May the Best Win": {
+    "id": 2009001,
+    "type": 4
+  },
+  "Messmer Soldier Armor": {
+    "id": 5140100,
+    "type": 1
+  },
+  "Messmer Soldier Gauntlets": {
+    "id": 5140200,
+    "type": 1
+  },
+  "Messmer Soldier Greaves": {
+    "id": 5140300,
+    "type": 1
+  },
+  "Messmer Soldier Helm": {
+    "id": 5140000,
+    "type": 1
+  },
+  "Messmer Soldier Shield": {
+    "id": 31500000,
+    "type": 0
+  },
+  "Messmer Soldier's Axe": {
+    "id": 14520000,
+    "type": 0
+  },
+  "Messmer Soldier's Spear": {
+    "id": 17510000,
+    "type": 0
+  },
+  "Messmer's Armor": {
+    "id": 5220100,
+    "type": 1
+  },
+  "Messmer's Gauntlets": {
+    "id": 5220200,
+    "type": 1
+  },
+  "Messmer's Greaves": {
+    "id": 5220300,
+    "type": 1
+  },
+  "Messmer's Helm": {
+    "id": 5220000,
+    "type": 1
+  },
+  "Messmer's Orb": {
+    "id": 2007820,
+    "type": 4
+  },
+  "Midra's Flame of Frenzy": {
+    "id": 2007300,
+    "type": 4
+  },
+  "Miriam's Vanishing": {
+    "id": 2004300,
+    "type": 4
+  },
+  "Misbegotten Shortbow": {
+    "id": 40010000,
+    "type": 0
+  },
+  "Missionary's Cookbook [1]": {
+    "id": 9361,
+    "type": 4
+  },
+  "Missionary's Cookbook [2]": {
+    "id": 9360,
+    "type": 4
+  },
+  "Missionary's Cookbook [7]": {
+    "id": 9423,
+    "type": 4
+  },
+  "Mohgwyn's Sacred Spear": {
+    "id": 17010000,
+    "type": 0
+  },
+  "Monk's Flameblade": {
+    "id": 8070000,
+    "type": 0
+  },
+  "Monk's Flamemace": {
+    "id": 11090000,
+    "type": 0
+  },
+  "Morgott's Cursed Sword": {
+    "id": 8100000,
+    "type": 0
+  },
+  "My Lord": {
+    "id": 5,
+    "type": 4
+  },
+  "My Thanks": {
+    "id": 2,
+    "type": 4
+  },
+  "Nagakiba": {
+    "id": 9010000,
+    "type": 4
+  },
+  "Nailstone": {
+    "id": 2020033,
+    "type": 4
+  },
+  "Nectarblood Burgeon": {
+    "id": 2020015,
+    "type": 4
+  },
+  "Night Maiden Armor": {
+    "id": 293100,
+    "type": 1
+  },
+  "Night Maiden Twin Crown": {
+    "id": 293000,
+    "type": 1
+  },
+  "Night Maiden's Mist": {
+    "id": 6500,
+    "type": 4
+  },
+  "Night Shard": {
+    "id": 4610,
+    "type": 4
+  },
+  "Noble's Estoc": {
+    "id": 5060000,
+    "type": 0
+  },
+  "Noble's Slender Sword": {
+    "id": 2230000,
+    "type": 0
+  },
+  "Nod In Thought": {
+    "id": 30,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [13]": {
+    "id": 9308,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [15]": {
+    "id": 9390,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [16]": {
+    "id": 9329,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [17]": {
+    "id": 9310,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [18]": {
+    "id": 9327,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [1]": {
+    "id": 9300,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [20]": {
+    "id": 9323,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [2]": {
+    "id": 9311,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [3]": {
+    "id": 9301,
+    "type": 4
+  },
+  "Nomadic Warrior's Cookbook [5]": {
+    "id": 9383,
+    "type": 4
+  },
+  "Note: Demi-human Mobs": {
+    "id": 8708,
+    "type": 4
+  },
+  "Note: Flame Chariots": {
+    "id": 8707,
+    "type": 4
+  },
+  "Note: Flask of Wondrous Physick": {
+    "id": 8702,
+    "type": 4
+  },
+  "Note: Frenzied Flame Village": {
+    "id": 8715,
+    "type": 4
+  },
+  "Note: Gateway": {
+    "id": 8713,
+    "type": 4
+  },
+  "Note: Gravity's Advantage": {
+    "id": 8710,
+    "type": 4
+  },
+  "Note: Hidden Cave": {
+    "id": 8700,
+    "type": 4
+  },
+  "Note: Imp Shades": {
+    "id": 8701,
+    "type": 4
+  },
+  "Note: Land Squirts": {
+    "id": 8709,
+    "type": 4
+  },
+  "Note: Revenants": {
+    "id": 8711,
+    "type": 4
+  },
+  "Note: Sealed Spiritsprings": {
+    "id": 2008031,
+    "type": 4
+  },
+  "Note: Stonedigger Trolls": {
+    "id": 8703,
+    "type": 4
+  },
+  "Note: Unseen Assassins": {
+    "id": 8705,
+    "type": 4
+  },
+  "Note: Waypoint Ruins": {
+    "id": 8712,
+    "type": 4
+  },
+  "Nox Monk Armor": {
+    "id": 290100,
+    "type": 1
+  },
+  "Nox Monk Hood": {
+    "id": 290000,
+    "type": 1
+  },
+  "Nox Swordstress Armor": {
+    "id": 292100,
+    "type": 1
+  },
+  "Nox Swordstress Crown": {
+    "id": 292000,
+    "type": 1
+  },
+  "O, Flame!": {
+    "id": 6001,
+    "type": 4
+  },
+  "Octopus Head": {
+    "id": 1110000,
+    "type": 4
+  },
+  "Old Aristocrat Cowl": {
+    "id": 390000,
+    "type": 4
+  },
+  "Old Aristocrat Gown": {
+    "id": 390100,
+    "type": 4
+  },
+  "Old Aristocrat Shoes": {
+    "id": 390300,
+    "type": 1
+  },
+  "Omen Bairn": {
+    "id": 3010,
+    "type": 4
+  },
+  "Omen Cleaver": {
+    "id": 8060000,
+    "type": 0
+  },
+  "Omenkiller Boots": {
+    "id": 1890300,
+    "type": 1
+  },
+  "Omenkiller Long Gloves": {
+    "id": 1890200,
+    "type": 1
+  },
+  "Omenkiller Robe": {
+    "id": 1890100,
+    "type": 1
+  },
+  "Omensmirk Mask": {
+    "id": 1890000,
+    "type": 1
+  },
+  "Order's Blade": {
+    "id": 6770,
+    "type": 0
+  },
+  "Outer Order": {
+    "id": 104,
+    "type": 4
+  },
+  "Page Garb": {
+    "id": 220100,
+    "type": 1
+  },
+  "Page Hood": {
+    "id": 220000,
+    "type": 1
+  },
+  "Page Trousers": {
+    "id": 220300,
+    "type": 1
+  },
+  "Parrying Dagger": {
+    "id": 1020000,
+    "type": 0
+  },
+  "Partisan": {
+    "id": 16050000,
+    "type": 0
+  },
+  "Patches' Crouch": {
+    "id": 180,
+    "type": 4
+  },
+  "Perfumer Gloves": {
+    "id": 90200,
+    "type": 1
+  },
+  "Perfumer Hood": {
+    "id": 90000,
+    "type": 1
+  },
+  "Perfumer Robe": {
+    "id": 90100,
+    "type": 1
+  },
+  "Perfumer Sarong": {
+    "id": 90300,
+    "type": 1
+  },
+  "Perfumer's Bolt": {
+    "id": 52020000,
+    "type": 0
+  },
+  "Perfumer's Cookbook [4]": {
+    "id": 9392,
+    "type": 0
+  },
+  "Perfumer's Shield": {
+    "id": 30010000,
+    "type": 0
+  },
+  "Pest Threads": {
+    "id": 7200,
+    "type": 4
+  },
+  "Pest's Glaive": {
+    "id": 18010000,
+    "type": 0
+  },
+  "Pickaxe": {
+    "id": 12140000,
+    "type": 0
+  },
+  "Placidusax's Ruin": {
+    "id": 7050,
+    "type": 4
+  },
+  "Point Downwards": {
+    "id": 22,
+    "type": 4
+  },
+  "Point Forwards": {
+    "id": 20,
+    "type": 4
+  },
+  "Point Upwards": {
+    "id": 21,
+    "type": 4
+  },
+  "Poleblade of the Bud": {
+    "id": 18510000,
+    "type": 0
+  },
+  "Polite Bow": {
+    "id": 2,
+    "type": 0
+  },
+  "Polter Stone": {
+    "id": 2002000,
+    "type": 4
+  },
+  "Prayer": {
+    "id": 100,
+    "type": 4
+  },
+  "Prelate's Inferno Crozier": {
+    "id": 23000000,
+    "type": 0
+  },
+  "Prince of Death's Cyst": {
+    "id": 1191,
+    "type": 4
+  },
+  "Prisoner Clothing": {
+    "id": 890100,
+    "type": 1
+  },
+  "Prisoner Iron Mask": {
+    "id": 890000,
+    "type": 1
+  },
+  "Prisoner Trousers": {
+    "id": 890300,
+    "type": 1
+  },
+  "Prophet Blindfold": {
+    "id": 620000,
+    "type": 4
+  },
+  "Prophet Robe": {
+    "id": 622100,
+    "type": 1
+  },
+  "Prophet Trousers": {
+    "id": 620300,
+    "type": 1
+  },
+  "Pumpkin Helm": {
+    "id": 440000,
+    "type": 1
+  },
+  "Putrescence Cleaver": {
+    "id": 8500000,
+    "type": 0
+  },
+  "Queen's Bracelets": {
+    "id": 510200,
+    "type": 4
+  },
+  "Queen's Crescent Crown": {
+    "id": 510000,
+    "type": 1
+  },
+  "Queen's Leggings": {
+    "id": 510300,
+    "type": 1
+  },
+  "Queen's Robe": {
+    "id": 510100,
+    "type": 1
+  },
+  "Rabbath's Greatbolt": {
+    "id": 53500000,
+    "type": 4
+  },
+  "Radagon's Rings of Light": {
+    "id": 6710,
+    "type": 4
+  },
+  "Radahn Soldier Gauntlets": {
+    "id": 1730200,
+    "type": 1
+  },
+  "Radahn Soldier Greaves": {
+    "id": 1730300,
+    "type": 1
+  },
+  "Radahn Soldier Helm": {
+    "id": 1730000,
+    "type": 1
+  },
+  "Radahn's Gauntlets": {
+    "id": 470200,
+    "type": 1
+  },
+  "Radahn's Greaves": {
+    "id": 470300,
+    "type": 1
+  },
+  "Radahn's Lion Armor": {
+    "id": 470100,
+    "type": 1
+  },
+  "Radahn's Redmane Helm": {
+    "id": 470000,
+    "type": 1
+  },
+  "Rallying Cry": {
+    "id": 50,
+    "type": 4
+  },
+  "Rapier": {
+    "id": 5020000,
+    "type": 0
+  },
+  "Rapture": {
+    "id": 102,
+    "type": 4
+  },
+  "Raya Lucarian Gauntlets": {
+    "id": 1710200,
+    "type": 1
+  },
+  "Raya Lucarian Greaves": {
+    "id": 1710300,
+    "type": 1
+  },
+  "Raya Lucarian Helm": {
+    "id": 1710000,
+    "type": 1
+  },
+  "Raya Lucarian Robe": {
+    "id": 830100,
+    "type": 1
+  },
+  "Red Branch Shortbow": {
+    "id": 40020000,
+    "type": 0
+  },
+  "Red Crest Heater Shield": {
+    "id": 31290000,
+    "type": 0
+  },
+  "Red Thorn Roundshield": {
+    "id": 30070000,
+    "type": 0
+  },
+  "Redmane Greatshield": {
+    "id": 32230000,
+    "type": 0
+  },
+  "Redmane Knight Armor": {
+    "id": 1800100,
+    "type": 1
+  },
+  "Redmane Knight Gauntlets": {
+    "id": 1800200,
+    "type": 1
+  },
+  "Redmane Knight Greaves": {
+    "id": 1800300,
+    "type": 1
+  },
+  "Redmane Knight Helm": {
+    "id": 1800000,
+    "type": 1
+  },
+  "Redmane Surcoat": {
+    "id": 1730100,
+    "type": 1
+  },
+  "Regal Omen Bairn": {
+    "id": 3011,
+    "type": 4
+  },
+  "Rejection": {
+    "id": 6400,
+    "type": 4
+  },
+  "Rellana's Armor": {
+    "id": 5260100,
+    "type": 1
+  },
+  "Rellana's Gloves": {
+    "id": 5260200,
+    "type": 1
+  },
+  "Rellana's Greaves": {
+    "id": 5260300,
+    "type": 1
+  },
+  "Rellana's Helm": {
+    "id": 5260000,
+    "type": 1
+  },
+  "Rellana's Twin Blades": {
+    "id": 67520000,
+    "type": 0
+  },
+  "Rellana's Twin Moons": {
+    "id": 2004320,
+    "type": 4
+  },
+  "Rennala's Full Moon": {
+    "id": 4360,
+    "type": 4
+  },
+  "Rest": {
+    "id": 92,
+    "type": 4
+  },
+  "Reverential Bow": {
+    "id": 4,
+    "type": 0
+  },
+  "Rickety Shield": {
+    "id": 30030000,
+    "type": 0
+  },
+  "Rift Shield": {
+    "id": 30110000,
+    "type": 0
+  },
+  "Ripple Blade": {
+    "id": 14050000,
+    "type": 0
+  },
+  "Ripple Crescent Halberd": {
+    "id": 18060000,
+    "type": 0
+  },
+  "Riveted Wooden Shield": {
+    "id": 30090000,
+    "type": 0
+  },
+  "Rogier's Rapier": {
+    "id": 5030000,
+    "type": 0
+  },
+  "Rotten Battle Hammer": {
+    "id": 12210000,
+    "type": 0
+  },
+  "Rotten Breath": {
+    "id": 7030,
+    "type": 4
+  },
+  "Rotten Butterflies": {
+    "id": 2007200,
+    "type": 4
+  },
+  "Rotten Crystal Spear": {
+    "id": 16160000,
+    "type": 0
+  },
+  "Rotten Crystal Staff": {
+    "id": 33270000,
+    "type": 0
+  },
+  "Rotten Duelist Greaves": {
+    "id": 2000300,
+    "type": 1
+  },
+  "Rotten Duelist Helm": {
+    "id": 2000000,
+    "type": 1
+  },
+  "Rotten Greataxe": {
+    "id": 23150000,
+    "type": 0
+  },
+  "Round Shield": {
+    "id": 31070000,
+    "type": 0
+  },
+  "Roundrock": {
+    "id": 2020027,
+    "type": 4
+  },
+  "Rowa Fruit": {
+    "id": 20720,
+    "type": 4
+  },
+  "Rowa Raisin": {
+    "id": 810,
+    "type": 4
+  },
+  "Royal Knight Armor": {
+    "id": 280100,
+    "type": 1
+  },
+  "Royal Knight Gauntlets": {
+    "id": 280200,
+    "type": 1
+  },
+  "Royal Knight Greaves": {
+    "id": 280300,
+    "type": 1
+  },
+  "Royal Knight Helm": {
+    "id": 280000,
+    "type": 1
+  },
+  "Ruptured Crystal Tear (Alternate)": {
+    "id": 11016,
+    "type": 4
+  },
+  "Rykard's Rancor": {
+    "id": 4830,
+    "type": 4
+  },
+  "Sacred Crown Helm": {
+    "id": 1880000,
+    "type": 1
+  },
+  "Sacred Relic Sword": {
+    "id": 3100000,
+    "type": 0
+  },
+  "Scale Armor": {
+    "id": 40100,
+    "type": 1
+  },
+  "Scarlet Aeonia": {
+    "id": 7240,
+    "type": 4
+  },
+  "Scarlet Tabard": {
+    "id": 1860100,
+    "type": 1
+  },
+  "Scholar's Armament": {
+    "id": 4460,
+    "type": 4
+  },
+  "Scholar's Shield": {
+    "id": 4470,
+    "type": 0
+  },
+  "Scimitar": {
+    "id": 7140000,
+    "type": 4
+  },
+  "Scorpion Kite Shield": {
+    "id": 31080000,
+    "type": 0
+  },
+  "Scorpion Stew (Drop)": {
+    "id": 2001200,
+    "type": 4
+  },
+  "Scripture Wooden Shield": {
+    "id": 30080000,
+    "type": 0
+  },
+  "Sentry's Torch": {
+    "id": 24070000,
+    "type": 0
+  },
+  "Shadow Militiaman Armor": {
+    "id": 5280100,
+    "type": 1
+  },
+  "Shadow Militiaman Gauntlets": {
+    "id": 5280200,
+    "type": 1
+  },
+  "Shadow Militiaman Greaves": {
+    "id": 5280300,
+    "type": 1
+  },
+  "Shadow Militiaman Helm": {
+    "id": 5280000,
+    "type": 1
+  },
+  "Shadow Sunflower Blossom": {
+    "id": 23510000,
+    "type": 4
+  },
+  "Shaman Furs": {
+    "id": 301100,
+    "type": 4
+  },
+  "Shaman Leggings": {
+    "id": 301300,
+    "type": 1
+  },
+  "Shard Spiral": {
+    "id": 4030,
+    "type": 4
+  },
+  "Sharp Gravel Stone": {
+    "id": 2020034,
+    "type": 4
+  },
+  "Short Spear": {
+    "id": 16000000,
+    "type": 0
+  },
+  "Short Sword": {
+    "id": 2010000,
+    "type": 0
+  },
+  "Shortbow": {
+    "id": 40000000,
+    "type": 0
+  },
+  "Shotel": {
+    "id": 7020000,
+    "type": 4
+  },
+  "Sitting Sideways": {
+    "id": 93,
+    "type": 4
+  },
+  "Smarag's Glintstone Breath": {
+    "id": 7041,
+    "type": 4
+  },
+  "Soldier's Crossbow": {
+    "id": 43000000,
+    "type": 0
+  },
+  "Sorcerer Leggings": {
+    "id": 830300,
+    "type": 1
+  },
+  "Sorcerer Manchettes": {
+    "id": 830200,
+    "type": 1
+  },
+  "Spear": {
+    "id": 16010000,
+    "type": 0
+  },
+  "Spear of the Impaler": {
+    "id": 17500000,
+    "type": 0
+  },
+  "Spiked Caestus": {
+    "id": 21010000,
+    "type": 0
+  },
+  "Spiked Club": {
+    "id": 11070000,
+    "type": 0
+  },
+  "Spiked Spear": {
+    "id": 16140000,
+    "type": 0
+  },
+  "Spread Out": {
+    "id": 95,
+    "type": 4
+  },
+  "Staff of the Great Beyond": {
+    "id": 33510000,
+    "type": 0
+  },
+  "Staff of the Guilty": {
+    "id": 33260000,
+    "type": 0
+  },
+  "Star Shower": {
+    "id": 4050,
+    "type": 4
+  },
+  "Starlight": {
+    "id": 4140,
+    "type": 4
+  },
+  "Starscourge Greatsword": {
+    "id": 4050000,
+    "type": 0
+  },
+  "Stone Club": {
+    "id": 11140000,
+    "type": 0
+  },
+  "Strength!": {
+    "id": 9,
+    "type": 4
+  },
+  "Sun Realm Shield": {
+    "id": 31050000,
+    "type": 0
+  },
+  "Surge, O Flame!": {
+    "id": 6220,
+    "type": 4
+  },
+  "Sweet Raisin": {
+    "id": 811,
+    "type": 4
+  },
+  "Swift Glintstone Shard": {
+    "id": 4010,
+    "type": 4
+  },
+  "Sword Lance": {
+    "id": 3500000,
+    "type": 0
+  },
+  "Telescope": {
+    "id": 2040,
+    "type": 4
+  },
+  "The Two Fingers": {
+    "id": 20600000,
+    "type": 4
+  },
+  "Theodorix's Magma": {
+    "id": 7011,
+    "type": 4
+  },
+  "Thorned Whip": {
+    "id": 20020000,
+    "type": 0
+  },
+  "Torch": {
+    "id": 24000000,
+    "type": 0
+  },
+  "Torchpole": {
+    "id": 16080000,
+    "type": 0
+  },
+  "Tree Surcoat": {
+    "id": 1102100,
+    "type": 1
+  },
+  "Tree-and-Beast Surcoat": {
+    "id": 1700100,
+    "type": 1
+  },
+  "Triumphant Delight": {
+    "id": 71,
+    "type": 4
+  },
+  "Troll Knight's Sword": {
+    "id": 4110000,
+    "type": 0
+  },
+  "Unalloyed Gold Needle (Broken)": {
+    "id": 8196,
+    "type": 4
+  },
+  "Unalloyed Gold Needle (Fixed)": {
+    "id": 8196,
+    "type": 4
+  },
+  "Unalloyed Gold Needle (Milicent)": {
+    "id": 8196,
+    "type": 4
+  },
+  "Urgent Heal": {
+    "id": 6420,
+    "type": 4
+  },
+  "Vagabond Knight Armor": {
+    "id": 660100,
+    "type": 1
+  },
+  "Vagabond Knight Gauntlets": {
+    "id": 660200,
+    "type": 1
+  },
+  "Vagabond Knight Greaves": {
+    "id": 660300,
+    "type": 1
+  },
+  "Vagabond Knight Helm": {
+    "id": 660000,
+    "type": 1
+  },
+  "Veteran's Armor": {
+    "id": 780100,
+    "type": 1
+  },
+  "Veteran's Gauntlets": {
+    "id": 780200,
+    "type": 1
+  },
+  "Veteran's Greaves": {
+    "id": 780300,
+    "type": 1
+  },
+  "Volcanic Stone": {
+    "id": 20850,
+    "type": 4
+  },
+  "Vortex of Putrescence": {
+    "id": 2006200,
+    "type": 4
+  },
+  "Vulgar Militia Armor": {
+    "id": 420100,
+    "type": 1
+  },
+  "Vulgar Militia Gauntlets": {
+    "id": 420200,
+    "type": 1
+  },
+  "Vulgar Militia Greaves": {
+    "id": 420300,
+    "type": 1
+  },
+  "Vulgar Militia Helm": {
+    "id": 420000,
+    "type": 1
+  },
+  "Vulgar Militia Saw": {
+    "id": 18070000,
+    "type": 0
+  },
+  "Vulgar Militia Shotel": {
+    "id": 18130000,
+    "type": 4
+  },
+  "Wait!": {
+    "id": 24,
+    "type": 4
+  },
+  "Warhawk's Talon": {
+    "id": 2240000,
+    "type": 4
+  },
+  "Warm Welcome": {
+    "id": 6,
+    "type": 4
+  },
+  "Warped Axe": {
+    "id": 15010000,
+    "type": 0
+  },
+  "Warpick": {
+    "id": 11040000,
+    "type": 4
+  },
+  "Warrior Gauntlets": {
+    "id": 670200,
+    "type": 1
+  },
+  "Warrior Greaves": {
+    "id": 670300,
+    "type": 1
+  },
+  "Watchdog's Greatsword": {
+    "id": 4010000,
+    "type": 0
+  },
+  "Wave": {
+    "id": 7,
+    "type": 4
+  },
+  "Weathered Straight Sword": {
+    "id": 2050000,
+    "type": 0
+  },
+  "What Do You Want?": {
+    "id": 98,
+    "type": 4
+  },
+  "Winged Greathorn": {
+    "id": 15110000,
+    "type": 4
+  },
+  "Winter-Lantern Fly": {
+    "id": 2020016,
+    "type": 4
+  },
+  "Young Lion's Armor": {
+    "id": 5270100,
+    "type": 1
+  },
+  "Young Lion's Gauntlets": {
+    "id": 5270200,
+    "type": 1
+  },
+  "Young Lion's Greaves": {
+    "id": 5270300,
+    "type": 1
+  },
+  "Young Lion's Helm": {
+    "id": 5270000,
+    "type": 1
+  },
+  "Zweihander": {
+    "id": 4040000,
+    "type": 4
   }
 }

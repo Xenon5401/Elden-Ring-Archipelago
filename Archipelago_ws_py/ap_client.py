@@ -96,6 +96,42 @@ with open('item_id_to_game_data.json', 'r', encoding='utf-8') as f:
 
 _X_PAT = re.compile(r'^(.+) x(\d+)$')
 
+
+class GivenLocations:
+    FILE = 'given_locations.json'
+
+    def __init__(self):
+        self._seed: str = ''
+        self._locs: set[int] = set()
+        self._load()
+
+    def _load(self):
+        try:
+            with open(self.FILE) as f:
+                data = json.load(f)
+                self._seed = data.get('seed', '')
+                self._locs = set(data.get('locations', []))
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass
+
+    def save(self):
+        with open(self.FILE, 'w') as f:
+            json.dump({'seed': self._seed, 'locations': sorted(self._locs)}, f)
+
+    def set_seed(self, seed: str):
+        if seed != self._seed:
+            print(f"[GivenLocations] Nouveau seed détecté, reset des locations données")
+            self._seed = seed
+            self._locs.clear()
+            self.save()
+
+    def add(self, loc_id: int):
+        self._locs.add(loc_id)
+        self.save()
+
+    def has(self, loc_id: int) -> bool:
+        return loc_id in self._locs
+
 secret = {"uuid": "afc006ee-e0f7-47b0-838b-7d2c37ed417b"}
 
 queue_serv_to_dll = asyncio.Queue()
@@ -106,6 +142,8 @@ game_data = GameData()
 
 async def server_archi():
     received_idx = 0
+    connected_once = False
+    given_locs = GivenLocations()
     while True:
         try:
             async with websockets.connect(server) as websocket:
@@ -113,6 +151,8 @@ async def server_archi():
                 print(f"Received RoomInfo: {raw}")
                 room_info = json.loads(raw)[0]
                 server_version = room_info.get("version")
+
+                given_locs.set_seed(room_info.get("seed_name", ""))
 
                 if game_data.is_empty:
                     await websocket.send(json.dumps([{"cmd": "GetDataPackage", "games": ["EldenRing"]}]))
@@ -139,6 +179,12 @@ async def server_archi():
                     print(f"Refused: {response.get('errors')}")
                     return
 
+                if connected_once:
+                    print("[Server] Reconnexion AP détectée, envoi Sync...")
+                    await websocket.send(json.dumps([{"cmd": "Sync"}]))
+                    received_idx = 0
+                connected_once = True
+
                 missing = response.get("missing_locations", [])
                 checked = response.get("checked_locations", [])
                 print(f"Connected! Team={response['team']} Slot={response['slot']}")
@@ -164,6 +210,12 @@ async def server_archi():
                                 if idx < received_idx:
                                     continue
                                 item_id = it.get("item")
+                                location_id = it.get("location")
+
+                                if given_locs.has(location_id):
+                                    print(f"[Server]   [{idx}] location={location_id} déjà donné, skip")
+                                    continue
+
                                 name = id_to_name.get(item_id)
                                 if name is None:
                                     print(f"[Server]   [{idx}] item_id={item_id} inconnu, skip")
@@ -183,6 +235,7 @@ async def server_archi():
                                 try:
                                     urllib.request.urlopen(url, timeout=2)
                                     print(f"[Server]   [{idx}] {name} → /give OK (qty={qty})")
+                                    given_locs.add(location_id)
                                 except Exception as e:
                                     print(f"[Server]   [{idx}] {name} → /give FAIL: {e}")
                                 await asyncio.sleep(0.05)
@@ -216,6 +269,7 @@ async def dll():
 
                 async def recv_loop():
                     pending_locs: set[int] = set()
+                    checked_locs: set[int] = set()
 
                     async def flush():
                         if pending_locs:
@@ -232,10 +286,15 @@ async def dll():
                             if isinstance(parsed, dict) and parsed.get("type") == "flag_set":
                                 if parsed.get("value") == 1:
                                     locs = game_data.locs_for_flag(parsed["flag_id"])
-                                    print(f"[DLL] Flag {parsed['flag_id']} → locations: {locs}")
-                                    pending_locs.update(locs)
+                                    new_locs = [loc for loc in locs if loc not in checked_locs]
+                                    if new_locs:
+                                        print(f"[DLL] Flag {parsed['flag_id']} → locations: {new_locs}")
+                                        pending_locs.update(new_locs)
+                                        checked_locs.update(new_locs)
 
                     async def flusher():
+                        await asyncio.sleep(0.5)
+                        await flush()
                         while True:
                             await asyncio.sleep(0.2)
                             await flush()
