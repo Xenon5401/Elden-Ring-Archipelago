@@ -250,22 +250,48 @@ async def server_archi():
             await asyncio.sleep(5)
 
 
+async def wait_for_ingame(websocket):
+    print("[DLL] Attente que le joueur soit en jeu...")
+    for _ in range(120):
+        await websocket.send(json.dumps({"get_status": True}))
+        try:
+            resp = await asyncio.wait_for(websocket.recv(), timeout=2.0)
+            data = json.loads(resp)
+            if data.get("in_game"):
+                print("[DLL] Joueur en jeu !")
+                return True
+        except (asyncio.TimeoutError, json.JSONDecodeError):
+            pass
+        await asyncio.sleep(0.5)
+    print("[DLL] Timeout attente jeu (continuant quand même)")
+    return False
+
+
 async def dll():
     while True:
         try:
             async with websockets.connect("ws://127.0.0.1:12999/ws", ping_interval=20, ping_timeout=10) as websocket:
                 print("[DLL] Connecté")
 
+                await wait_for_ingame(websocket)
+
+                await queue_dll_to_serv.put([{"cmd": "StatusUpdate", "status": 20}])
+                print("[DLL] CLIENT_PLAYING envoyé")
+
                 flags = game_data.watch_flags()
                 if flags:
                     loot_msg = {"set_flag_loot": flags}
-                    print(f"[DLL] Envoi de {len(flags)} flags à surveiller")
-                    await websocket.send(json.dumps(loot_msg))
-                    try:
-                        resp = await asyncio.wait_for(websocket.recv(), timeout=5.0)
-                        print(f"[DLL] Réponse set_flag_loot: {resp}")
-                    except asyncio.TimeoutError:
-                        print("[DLL] Timeout set_flag_loot (continuant...)")
+                    for attempt in range(3):
+                        print(f"[DLL] Envoi de {len(flags)} flags à surveiller (tentative {attempt+1}/3)")
+                        await websocket.send(json.dumps(loot_msg))
+                        try:
+                            resp = await asyncio.wait_for(websocket.recv(), timeout=5.0)
+                            print(f"[DLL] Réponse set_flag_loot: {resp}")
+                            break
+                        except asyncio.TimeoutError:
+                            print(f"[DLL] Timeout set_flag_loot (tentative {attempt+1}/3)")
+                    else:
+                        print("[DLL] set_flag_loot a échoué après 3 tentatives")
 
                 async def recv_loop():
                     pending_locs: set[int] = set()
@@ -285,6 +311,9 @@ async def dll():
                             print(f"[DLL] Event: {parsed}")
                             if isinstance(parsed, dict) and parsed.get("type") == "flag_set":
                                 if parsed.get("value") == 1:
+                                    if parsed["flag_id"] == 510230:
+                                        print("[DLL] Elden Beast battu ! Envoi CLIENT_GOAL...")
+                                        await queue_dll_to_serv.put([{"cmd": "StatusUpdate", "status": 30}])
                                     locs = game_data.locs_for_flag(parsed["flag_id"])
                                     new_locs = [loc for loc in locs if loc not in checked_locs]
                                     if new_locs:

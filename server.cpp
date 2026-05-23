@@ -81,6 +81,18 @@ static void handle_give(const httplib::Request& req, httplib::Response& res) {
 }
 
 static void ws_handle(httplib::ws::WebSocket& w, const std::string& msg) {
+    if (msg.find("get_status") != std::string::npos) {
+        bool patterns = ensure_patterns();
+        bool ingame = patterns && get_inventory_manager() != nullptr;
+        std::string resp = "{\"type\":\"status\",\"patterns_found\":";
+        resp += patterns ? "true" : "false";
+        resp += ",\"in_game\":";
+        resp += ingame ? "true" : "false";
+        resp += "}";
+        w.send(resp);
+        return;
+    }
+
     if (msg.find("set_flag_loot") != std::string::npos) {
         extract_int_array(msg, g_FlagLoot);
         if (ensure_patterns()) {

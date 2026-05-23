@@ -19,6 +19,9 @@ enum ItemType : uint32_t {
     ItemType_AshOfWar = 0x8,
 };
 
+// Encode un item au format interne FromSoft pour AddItem.
+// bits 0-27 = base_id, bits 28-31 = type_bit, + upgrade ajouté en offset.
+// type_bit: 0=Weapon, 1=Armor, 2=Talisman, 4=Goods, 8=AshOfWar
 static inline uint32_t encode_item_id(uint32_t base_id, uint32_t type_bit, uint32_t upgrade) {
     return (base_id | (type_bit << 28)) + upgrade;
 }
