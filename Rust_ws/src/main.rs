@@ -1,111 +1,56 @@
-use websocket::ClientBuilder;
-use websocket::Message;
-use websocket::r#async;
-use uuid::Uuid;
+mod ap_client;
+mod config;
+mod dll_client;
+mod game_data;
+mod given_locations;
 
-const PATH_CONFIG: &str = "/home/xenon/Downloads/ArchipelagoEldenRing/Elden-Ring-Archipelago/Rust_ws/src/elden_ring.yaml";
-const PATH_GAMEDATA: &str = "/home/xenon/Downloads/ArchipelagoEldenRing/Elden-Ring-Archipelago/Rust_ws/src/gamedata.json";
-
-fn recv_message_ws(client: &mut websocket::sync::Client<std::net::TcpStream>) -> Option<serde_json::Value> {
-    match client.recv_message() {
-        Ok(message) => {
-            if let websocket::OwnedMessage::Text(text) = message {
-                Some(serde_json::from_str(&text).unwrap())
-            } else {
-                println!("❌ Message reçu n'est pas du texte.");
-                None
-            }
-        }
-        Err(e) => {
-            println!("❌ Erreur lors de la réception du message : {}", e);
-            None
-        }
-    }
+pub struct ApMsg {
+    pub base_id: u32,
+    pub item_type: u32,
+    pub qty: u32,
 }
 
-fn send_message_ws(client: &mut websocket::sync::Client<std::net::TcpStream>, message: &str) -> bool {
-    let msg = Message::text(message.to_string());
-    match client.send_message(&msg) {
-        Ok(_) => {
-            println!("Message envoyé avec succès.");
-            true
-        }
-        Err(e) => {
-            println!("❌ Impossible d'envoyer le message : {}", e);
-            false
-        }
-    }
-}
-fn main() {
-    // 1. Lecture et parsing de la config YAML
-    let config_str = std::fs::read_to_string(PATH_CONFIG)
-        .unwrap_or_else(|e| { println!("❌ Impossible de lire config.yaml : {}", e); return String::new(); }); // (Note: si tu return de la fonction, le String::new() n'est jamais atteint)
+#[tokio::main]
+async fn main() {
+    let data_path = std::env::current_dir()
+        .unwrap_or_default()
+        .join("src")
+        .to_string_lossy()
+        .to_string();
 
-    let config: serde_json::Value = serde_yaml::from_str(&config_str)
-        .unwrap_or_else(|e| { println!("❌ Impossible de parser config.yaml : {}", e); return serde_json::Value::Null; });
+    let config_path = std::path::Path::new(&data_path).join("elden_ring.yaml");
+    let cfg = config::load_config(&config_path);
 
-    // 2. Lecture et parsing de gamedata JSON
-    let gamedata_str = std::fs::read_to_string(PATH_GAMEDATA)
-        .unwrap_or_else(|e| { println!("❌ Impossible de lire gamedata.json : {}", e); return String::new(); });
+    let game_data = std::sync::Arc::new(tokio::sync::RwLock::new(
+        game_data::GameData::load(&data_path),
+    ));
 
-    let mut gamedata: serde_json::Value = serde_json::from_str(&gamedata_str)
-        .unwrap_or_else(|e| { println!("❌ Impossible de parser gamedata.json : {}", e); return serde_json::Value::Null; });
+    let (dll_tx, mut dll_rx) = tokio::sync::mpsc::unbounded_channel::<dll_client::DllMsg>();
+    let (ap_dll_tx, ap_dll_rx) = tokio::sync::mpsc::unbounded_channel::<ApMsg>();
 
-    if gamedata.is_null() {
-        gamedata = serde_json::json!({
-            "checklist": [],
-            "checksum": "",
-            "item_name_to_id": {},
-            "location_name_to_id": {},
-            "location_to_flag": {},
-            "uuid": Uuid::new_v4().to_string()
-        });
-    }
+    let gd_ap = game_data.clone();
+    let cfg_ap = cfg;
+    let data_path_ap = data_path.clone();
+    let dll_tx_ap = dll_tx.clone();
 
-    println!("Tentative de connexion au serveur...");
-    // 4. On tente de se connecter sans crash direct
-    let client_result = ClientBuilder::new("ws://127.0.0.1:38281")
-        .unwrap()
-        .connect_insecure();
+    let ap_handle = tokio::spawn(async move {
+        ap_client::run(
+            cfg_ap,
+            data_path_ap,
+            gd_ap,
+            dll_tx_ap,
+            &mut dll_rx,
+            ap_dll_tx,
+        )
+        .await;
+    });
 
-    match client_result {
-        Ok(mut client) => {
-            println!("✅ Connecté au serveur WebSocket !");
-            // 1. On attend un message du serveur
-            let msg = recv_message_ws(&mut client).unwrap();
-            println!("📥 Message reçu du serveur : {}",msg);
-            // 2. On demande DataPackage du serveur
-            if gamedata["checksum"] !=  msg[0]["datapackage_checksums"]["EldenRing"] {
-                send_message_ws(&mut client, &serde_json::json!([{"cmd": "GetDataPackage", "games": ["EldenRing"]}]).to_string());
-                let getdatapackage = recv_message_ws(&mut client).unwrap();
-                println!("📥 DataPackage reçu du serveur");
-                gamedata["location_name_to_id"] = getdatapackage[0]["data"]["games"]["EldenRing"]["location_name_to_id"].clone();
-                gamedata["item_name_to_id"] = getdatapackage[0]["data"]["games"]["EldenRing"]["item_name_to_id"].clone();
-                gamedata["location_to_flag"] = getdatapackage[0]["data"]["games"]["EldenRing"]["location_id_to_er_flag"].clone();
-                gamedata["checksum"] = getdatapackage[0]["data"]["games"]["EldenRing"]["checksum"].clone();
-                std::fs::write(PATH_GAMEDATA, serde_json::to_string_pretty(&gamedata).unwrap()).expect("Impossible d'écrire gamedata.json");
-                return;
-            }
+    let gd_dll = game_data.clone();
+    let data_path_dll = data_path.clone();
 
-            // 3. On envoie notre message de connexion
-            let json_message  = serde_json::json!([{
-                "cmd": "Connect",
-                "password": "",
-                "game": "EldenRing",
-                "name": "Xenon",
-                "uuid": "123e4567-e89b-12d3-a456-426614174000",
-                "version": msg[0]["version"],
-                "items_handling": 3,
-                "tags": [],
-                "slot_data": false
-            }]).to_string();
-            send_message_ws(&mut client, &json_message);
+    let dll_handle = tokio::spawn(async move {
+        dll_client::run(data_path_dll, gd_dll, dll_tx, ap_dll_rx).await;
+    });
 
-            
-        }
-
-        Err(e) => {
-            println!("❌ Erreur de connexion : {}.", e);
-        }
-    }
+    let _ = tokio::join!(ap_handle, dll_handle);
 }
