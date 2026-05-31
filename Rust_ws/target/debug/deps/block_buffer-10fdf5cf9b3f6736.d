@@ -1,0 +1,5 @@
+/home/xenon/Downloads/ArchipelagoEldenRing/Elden-Ring-Archipelago/Rust_ws/target/debug/deps/block_buffer-10fdf5cf9b3f6736.d: /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/block-buffer-0.7.3/src/lib.rs
+
+/home/xenon/Downloads/ArchipelagoEldenRing/Elden-Ring-Archipelago/Rust_ws/target/debug/deps/libblock_buffer-10fdf5cf9b3f6736.rmeta: /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/block-buffer-0.7.3/src/lib.rs
+
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/block-buffer-0.7.3/src/lib.rs:

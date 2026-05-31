@@ -1,0 +1,13 @@
+/home/xenon/Downloads/ArchipelagoEldenRing/Elden-Ring-Archipelago/Rust_ws/target/debug/deps/url-baaca949cb6f6bce.d: /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/lib.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/encoding.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/host.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/origin.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/path_segments.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/parser.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/slicing.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/form_urlencoded.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/quirks.rs
+
+/home/xenon/Downloads/ArchipelagoEldenRing/Elden-Ring-Archipelago/Rust_ws/target/debug/deps/liburl-baaca949cb6f6bce.rmeta: /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/lib.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/encoding.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/host.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/origin.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/path_segments.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/parser.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/slicing.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/form_urlencoded.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/quirks.rs
+
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/lib.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/encoding.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/host.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/origin.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/path_segments.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/parser.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/slicing.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/form_urlencoded.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/url-1.7.2/src/quirks.rs:
