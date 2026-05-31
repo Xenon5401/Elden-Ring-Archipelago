@@ -1,9 +1,0 @@
-/home/xenon/Downloads/ArchipelagoEldenRing/Elden-Ring-Archipelago/Rust_ws/target/debug/deps/tokio_reactor-689227579df07d01.d: /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/lib.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/background.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/poll_evented.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/registration.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/sharded_rwlock.rs
-
-/home/xenon/Downloads/ArchipelagoEldenRing/Elden-Ring-Archipelago/Rust_ws/target/debug/deps/libtokio_reactor-689227579df07d01.rmeta: /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/lib.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/background.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/poll_evented.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/registration.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/sharded_rwlock.rs
-
-/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/lib.rs:
-/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/background.rs:
-/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/poll_evented.rs:
-/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/registration.rs:
-/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-reactor-0.1.12/src/sharded_rwlock.rs:
