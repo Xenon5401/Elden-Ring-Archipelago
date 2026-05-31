@@ -51,8 +51,19 @@ fn main() {
     let mut gamedata: serde_json::Value = serde_json::from_str(&gamedata_str)
         .unwrap_or_else(|e| { println!("❌ Impossible de parser gamedata.json : {}", e); return serde_json::Value::Null; });
 
+    if gamedata.is_null() {
+        gamedata = serde_json::json!({
+            "checklist": [],
+            "checksum": "",
+            "item_name_to_id": {},
+            "location_name_to_id": {},
+            "location_to_flag": {},
+            "uuid": Uuid::new_v4().to_string()
+        });
+    }
+
     println!("Tentative de connexion au serveur...");
-    // 1. On tente de se connecter sans crash direct
+    // 4. On tente de se connecter sans crash direct
     let client_result = ClientBuilder::new("ws://127.0.0.1:38281")
         .unwrap()
         .connect_insecure();
